@@ -1,11 +1,52 @@
-﻿---
-layout: page
-title: "Digital Marketing Blog"
-description: "Insights on SEO, performance marketing, analytics, and AI-driven growth from a data-driven marketing specialist."
-permalink: /blog.html
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<title>Digital Marketing Blog | Ananth Sridev</title>
+<meta name="description" content="Insights on SEO, performance marketing, analytics, and AI-driven growth from a data-driven marketing specialist.">
+<link rel="canonical" href="http://localhost:4000/blog.html">
+<meta property="og:title" content="Digital Marketing Blog">
+<meta property="og:description" content="Insights on SEO, performance marketing, analytics, and AI-driven growth from a data-driven marketing specialist.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:4000/blog.html">
+<meta property="og:site_name" content="Ananth Sridev">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Digital Marketing Blog">
+<meta name="twitter:description" content="Insights on SEO, performance marketing, analytics, and AI-driven growth from a data-driven marketing specialist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
 
-<section class="page-section">
+
+</head>
+<body>
+    <nav>
+    <div class="container">
+        <a href="/index.html" class="logo">Ananth<span>Sridev</span></a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="navMenu">
+            <li><a href="/index.html" class="nav-link">Home</a></li>
+            <li><a href="/about.html" class="nav-link">About</a></li>
+            <li><a href="/services.html" class="nav-link">Services</a></li>
+            <li><a href="/portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="/case-studies.html" class="nav-link">Case Studies</a></li>
+            <li><a href="/blog.html" class="nav-link">Blog</a></li>
+            <li><a href="/tech-stack.html" class="nav-link">Tech Stack</a></li>
+            <li><a href="/resume.html" class="nav-link">Resume</a></li>
+            <li><a href="/contact.html" class="nav-link nav-cta">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+    <section class="page-section">
     <div class="container">
         <div class="section-header">
             <div class="section-tag">Latest Insights</div>
@@ -13,42 +54,162 @@ permalink: /blog.html
             <p class="section-subtitle">Practical SEO, PPC, analytics, and AI-era growth systems based on real implementations.</p>
         </div>
 
-        {% assign featured = site.posts | first %}
-        {% if featured %}
+        
+        
         <div class="featured-post">
             <div class="featured-image">
                 <span class="featured-badge">Featured</span>
             </div>
             <div class="featured-content">
                 <div class="post-meta">
-                    <span class="category {{ featured.category_class }}">{{ featured.category }}</span>
-                    <span class="date">{{ featured.date | date: "%B %-d, %Y" }}</span>
-                    <span class="read-time">{{ featured.read_time }}</span>
+                    <span class="category seo">SEO</span>
+                    <span class="date">February 10, 2026</span>
+                    <span class="read-time">8 min read</span>
                 </div>
-                <h2><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
-                <p>{{ featured.description }}</p>
-                <a href="{{ featured.url | relative_url }}" class="read-more-btn">Read Article ?</a>
+                <h2><a href="/blog/ga4-migration-guide.html">The Complete GA4 Migration Guide for 2026</a></h2>
+                <p>Universal Analytics is gone. Here is my practical GA4 migration guide with clean tracking, AI-ready reporting, and conversion integrity.</p>
+                <a href="/blog/ga4-migration-guide.html" class="read-more-btn">Read Article ?</a>
             </div>
         </div>
-        {% endif %}
+        
 
         <div class="blog-grid">
-            {% for post in site.posts offset:1 limit:9 %}
+            
             <article class="blog-card">
                 <div class="blog-image">
-                    <span class="blog-category {{ post.category_class }}">{{ post.category }}</span>
+                    <span class="blog-category seo">SEO</span>
                 </div>
                 <div class="blog-content">
                     <div class="post-meta-small">
-                        <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
-                        <span class="read-time">{{ post.read_time }}</span>
+                        <span class="date">February 8, 2026</span>
+                        <span class="read-time">6 min read</span>
                     </div>
-                    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                    <p>{{ post.description }}</p>
-                    <a href="{{ post.url | relative_url }}" class="read-more">Read More ?</a>
+                    <h3><a href="/blog/answer-engine-optimization.html">Answer Engine Optimization: SEO's New Frontier</a></h3>
+                    <p>AEO for AI search: how to structure content, entities, and schema so LLMs surface your brand in answers and summaries.</p>
+                    <a href="/blog/answer-engine-optimization.html" class="read-more">Read More ?</a>
                 </div>
             </article>
-            {% endfor %}
+            
+            <article class="blog-card">
+                <div class="blog-image">
+                    <span class="blog-category ppc">PPC</span>
+                </div>
+                <div class="blog-content">
+                    <div class="post-meta-small">
+                        <span class="date">February 5, 2026</span>
+                        <span class="read-time">7 min read</span>
+                    </div>
+                    <h3><a href="/blog/google-ads-automation.html">Google Ads Automation: When to Use It (and When Not To)</a></h3>
+                    <p>When automation helps and when manual control wins in Google Ads, plus the AI-era checklist for clean signals.</p>
+                    <a href="/blog/google-ads-automation.html" class="read-more">Read More ?</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-image">
+                    <span class="blog-category analytics">Analytics</span>
+                </div>
+                <div class="blog-content">
+                    <div class="post-meta-small">
+                        <span class="date">February 1, 2026</span>
+                        <span class="read-time">10 min read</span>
+                    </div>
+                    <h3><a href="/blog/gtm-data-layer-guide.html">Mastering Google Tag Manager: Data Layer Best Practices</a></h3>
+                    <p>How to design a clean data layer for GA4, ads, and AI analytics. Naming, parameters, QA, and governance.</p>
+                    <a href="/blog/gtm-data-layer-guide.html" class="read-more">Read More ?</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-image">
+                    <span class="blog-category strategy">Strategy</span>
+                </div>
+                <div class="blog-content">
+                    <div class="post-meta-small">
+                        <span class="date">January 28, 2026</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <h3><a href="/blog/marketing-attribution-models.html">Marketing Attribution Models: Which One Is Right for You?</a></h3>
+                    <p>How to choose attribution models for AI-era funnels, with a practical decision framework.</p>
+                    <a href="/blog/marketing-attribution-models.html" class="read-more">Read More ?</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-image">
+                    <span class="blog-category seo">SEO</span>
+                </div>
+                <div class="blog-content">
+                    <div class="post-meta-small">
+                        <span class="date">January 25, 2026</span>
+                        <span class="read-time">8 min read</span>
+                    </div>
+                    <h3><a href="/blog/schema-markup-guide.html">Schema Markup for SEO: The Complete Implementation Guide</a></h3>
+                    <p>Schema markup that actually improves AI visibility and rich results: entity types, JSON-LD structure, and QA steps.</p>
+                    <a href="/blog/schema-markup-guide.html" class="read-more">Read More ?</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-image">
+                    <span class="blog-category automation">Automation</span>
+                </div>
+                <div class="blog-content">
+                    <div class="post-meta-small">
+                        <span class="date">January 20, 2026</span>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <h3><a href="/blog/email-automation-workflows.html">7 Email Automation Workflows That Convert</a></h3>
+                    <p>Email automation sequences that convert in the AI era: triggers, timing, and intent-based personalization.</p>
+                    <a href="/blog/email-automation-workflows.html" class="read-more">Read More ?</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-image">
+                    <span class="blog-category analytics">Analytics</span>
+                </div>
+                <div class="blog-content">
+                    <div class="post-meta-small">
+                        <span class="date">January 15, 2026</span>
+                        <span class="read-time">9 min read</span>
+                    </div>
+                    <h3><a href="/blog/conversion-rate-optimization.html">Conversion Rate Optimization: A Data-Driven Framework</a></h3>
+                    <p>A CRO system built for AI-era analytics: diagnostics, prioritization, hypotheses, and clean experiments.</p>
+                    <a href="/blog/conversion-rate-optimization.html" class="read-more">Read More ?</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-image">
+                    <span class="blog-category ppc">PPC</span>
+                </div>
+                <div class="blog-content">
+                    <div class="post-meta-small">
+                        <span class="date">January 10, 2026</span>
+                        <span class="read-time">7 min read</span>
+                    </div>
+                    <h3><a href="/blog/meta-ads-strategy-2026.html">Meta Ads Strategy for 2026: What's Actually Working</a></h3>
+                    <p>Meta Ads in 2026: first-party data, CAPI, creative testing, and AI-friendly measurement that holds up.</p>
+                    <a href="/blog/meta-ads-strategy-2026.html" class="read-more">Read More ?</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-image">
+                    <span class="blog-category seo">SEO</span>
+                </div>
+                <div class="blog-content">
+                    <div class="post-meta-small">
+                        <span class="date">January 5, 2026</span>
+                        <span class="read-time">6 min read</span>
+                    </div>
+                    <h3><a href="/blog/technical-seo-checklist.html">Technical SEO Checklist: 50 Points to Audit Your Site</a></h3>
+                    <p>A modern technical SEO checklist for performance, crawlability, and AI readiness.</p>
+                    <a href="/blog/technical-seo-checklist.html" class="read-more">Read More ?</a>
+                </div>
+            </article>
+            
         </div>
 
         <div class="newsletter-section">
@@ -65,4 +226,53 @@ permalink: /blog.html
         </div>
     </div>
 </section>
+
+
+
+
+    <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo">Ananth<span>Sridev</span></div>
+            <p class="footer-bio">Data-driven Digital Marketing Specialist with 6+ years of expertise in SEO, performance marketing, analytics, and marketing automation.</p>
+            <div class="footer-stats">
+                <div class="stat-item"><strong>6+</strong><span>Years Experience</span></div>
+                <div class="stat-item"><strong>150+</strong><span>Projects</span></div>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Me</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/case-studies.html">Case Studies</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/tech-stack.html">Tech Stack</a></li>
+                <li><a href="/resume.html">Resume</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Me</h4>
+            <div class="social-media-links">
+                <a href="https://www.linkedin.com/in/ananthsridev/" target="_blank" class="social-icon linkedin" rel="noopener">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0-5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Ananth Sridev. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/assets/js/config.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+</html>
 

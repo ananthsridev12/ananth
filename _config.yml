@@ -1,0 +1,10 @@
+url: "https://ananth.easi7.in"
+baseurl: ""
+title: "Ananth Sridev"
+description: "Data-driven digital marketing strategist specializing in SEO, performance marketing, analytics, and automation."
+permalink: /blog/:slug.html
+markdown: kramdown
+
+exclude:
+  - "{assets"
+  - "{assets/**"

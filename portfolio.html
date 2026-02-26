@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ananth Sridev - Digital Marketing Projects</title>
+    <meta name="description" content="Explore my digital marketing portfolio featuring successful SEO campaigns, PPC strategies, analytics implementations, and marketing automation projects.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Ananth<span>Sridev</span></a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="tech-stack.html" class="nav-link">Tech Stack</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Portfolio Page Content -->
+    <section class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">My Work</div>
+                <h1 class="section-title">Portfolio</h1>
+                <p class="section-subtitle">
+                    Real projects, real results. Here's a selection of digital marketing campaigns and implementations I've led.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="seo">SEO</button>
+                <button class="filter-btn" data-filter="ppc">PPC</button>
+                <button class="filter-btn" data-filter="analytics">Analytics</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid-masonry">
+                <!-- Project 1 -->
+                <article class="portfolio-item" data-category="analytics automation">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Analytics & Automation</span>
+                            <h3>DhanLAP Complete Marketing Infrastructure</h3>
+                            <p>Built end-to-end tracking system with GA4, GTM, CRM integration, and automated lead nurturing workflows.</p>
+                            <a href="portfolio/dhanlap-infrastructure.html" class="view-project">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="portfolio/dhanlap-infrastructure.html">DhanLAP Complete Marketing Infrastructure</a></h3>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>40%</strong>
+                                <span>Traffic Increase</span>
+                            </div>
+                            <div class="stat">
+                                <strong>25%</strong>
+                                <span>Better Conversions</span>
+                            </div>
+                            <div class="stat">
+                                <strong>35%</strong>
+                                <span>Lower CPL</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="portfolio-item" data-category="seo">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">SEO</span>
+                            <h3>E-Commerce SEO Overhaul</h3>
+                            <p>Complete technical SEO audit and implementation for a 10,000+ product e-commerce site, including schema markup and site speed optimization.</p>
+                            <a href="portfolio/ecommerce-seo.html" class="view-project">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="portfolio/ecommerce-seo.html">E-Commerce SEO Overhaul</a></h3>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>180%</strong>
+                                <span>Organic Traffic</span>
+                            </div>
+                            <div class="stat">
+                                <strong>6x</strong>
+                                <span>Ad Budget Scale</span>
+                            </div>
+                            <div class="stat">
+                                <strong>45%</strong>
+                                <span>Better ROI</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="portfolio-item" data-category="ppc">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">PPC</span>
+                            <h3>B2B Lead Generation Campaign</h3>
+                            <p>Multi-channel PPC strategy targeting US market with Facebook, LinkedIn, and Google Ads integration.</p>
+                            <a href="portfolio/b2b-lead-gen.html" class="view-project">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="portfolio/b2b-lead-gen.html">B2B Lead Generation Campaign</a></h3>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>250+</strong>
+                                <span>Qualified Leads</span>
+                            </div>
+                            <div class="stat">
+                                <strong>60%</strong>
+                                <span>Lower CPL</span>
+                            </div>
+                            <div class="stat">
+                                <strong>15%</strong>
+                                <span>Conversion Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="portfolio-item" data-category="analytics">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Analytics</span>
+                            <h3>GA4 Migration & Implementation</h3>
+                            <p>Migrated enterprise client from Universal Analytics to GA4 with custom event tracking and BigQuery integration.</p>
+                            <a href="portfolio/ga4-migration.html" class="view-project">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="portfolio/ga4-migration.html">GA4 Migration & Implementation</a></h3>
+                        <div class="project-tags">
+                            <span class="tag">GA4</span>
+                            <span class="tag">GTM</span>
+                            <span class="tag">BigQuery</span>
+                            <span class="tag">Data Layer</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="portfolio-item" data-category="automation">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Marketing Automation</span>
+                            <h3>CRM & Email Automation Setup</h3>
+                            <p>Designed and implemented automated lead nurturing workflows, email sequences, and CRM integration for fintech platform.</p>
+                            <a href="portfolio/crm-automation.html" class="view-project">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="portfolio/crm-automation.html">CRM & Email Automation Setup</a></h3>
+                        <div class="project-tags">
+                            <span class="tag">CRM</span>
+                            <span class="tag">Email Marketing</span>
+                            <span class="tag">Workflow Automation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="portfolio-item" data-category="seo">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">SEO</span>
+                            <h3>Local SEO for Multi-Location Business</h3>
+                            <p>Optimized 15 location pages with schema markup, GMB optimization, and local link building strategy.</p>
+                            <a href="portfolio/local-seo.html" class="view-project">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="portfolio/local-seo.html">Local SEO for Multi-Location Business</a></h3>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>320%</strong>
+                                <span>Local Traffic</span>
+                            </div>
+                            <div class="stat">
+                                <strong>Top 3</strong>
+                                <span>Map Pack Rankings</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 7 -->
+                <article class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Web Development</span>
+                            <h3>High-Converting Landing Pages</h3>
+                            <p>Designed and developed 10+ landing pages for PPC campaigns with A/B testing and conversion optimization.</p>
+                            <a href="portfolio/landing-pages.html" class="view-project">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="portfolio/landing-pages.html">High-Converting Landing Pages</a></h3>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>8.5%</strong>
+                                <span>Avg Conversion Rate</span>
+                            </div>
+                            <div class="stat">
+                                <strong>-42%</strong>
+                                <span>Bounce Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 8 -->
+                <article class="portfolio-item" data-category="seo analytics">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">SEO & Analytics</span>
+                            <h3>Content Strategy & Optimization</h3>
+                            <p>Developed data-driven content strategy resulting in 5x organic traffic growth over 6 months.</p>
+                            <a href="portfolio/content-strategy.html" class="view-project">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="portfolio/content-strategy.html">Content Strategy & Optimization</a></h3>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>5x</strong>
+                                <span>Organic Traffic</span>
+                            </div>
+                            <div class="stat">
+                                <strong>200+</strong>
+                                <span>Keywords Ranked</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 9 -->
+                <article class="portfolio-item" data-category="ppc">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">PPC</span>
+                            <h3>Google Shopping Campaign Optimization</h3>
+                            <p>Restructured product feed, implemented smart bidding, and optimized shopping campaigns for e-commerce client.</p>
+                            <a href="portfolio/shopping-campaigns.html" class="view-project">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="portfolio/shopping-campaigns.html">Google Shopping Campaign Optimization</a></h3>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <strong>220%</strong>
+                                <span>ROAS Improvement</span>
+                            </div>
+                            <div class="stat">
+                                <strong>-38%</strong>
+                                <span>CPA Reduction</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 10 -->
+                <article class="portfolio-item" data-category="analytics automation">
+                    <div class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <span class="project-category">Analytics & Reporting</span>
+                            <h3>Custom Dashboard & Reporting System</h3>
+                            <p>Built automated marketing dashboard using Looker Studio, BigQuery, and custom API integrations.</p>
+                            <a href="portfolio/custom-dashboard.html" class="view-project">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3><a href="portfolio/custom-dashboard.html">Custom Dashboard & Reporting System</a></h3>
+                        <div class="project-tags">
+                            <span class="tag">Looker Studio</span>
+                            <span class="tag">BigQuery</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="portfolio-cta">
+                <h2>Ready to Get Similar Results?</h2>
+                <p>Let's discuss how I can help you achieve your digital marketing goals with data-driven strategies and proven execution.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-button">Start a Project</a>
+                    <a href="case-studies.html" class="cta-button secondary">View Detailed Case Studies</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Portfolio Filter Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all') {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            const categories = item.getAttribute('data-category').split(' ');
+                            if (categories.includes(filterValue)) {
+                                item.style.display = 'block';
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'scale(1)';
+                                }, 10);
+                            } else {
+                                item.style.opacity = '0';
+                                item.style.transform = 'scale(0.8)';
+                                setTimeout(() => {
+                                    item.style.display = 'none';
+                                }, 300);
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

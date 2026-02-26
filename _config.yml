@@ -1,0 +1,8 @@
+﻿url: "https://ananth.easi7.in"
+baseurl: ""
+title: "Ananth Sridev"
+description: "Data-driven Digital Marketing Specialist"
+permalink: /blog/:slug.html
+markdown: kramdown
+collections: {}
+

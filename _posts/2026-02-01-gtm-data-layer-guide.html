@@ -1,0 +1,45 @@
+﻿---
+layout: post
+title: "Mastering Google Tag Manager: Data Layer Best Practices"
+description: "How to design a clean data layer for GA4, ads, and AI analytics. Naming, parameters, QA, and governance."
+date: 2026-02-01
+category: "Analytics"
+category_class: "analytics"
+read_time: "10 min read"
+og_type: "article"
+permalink: /blog/gtm-data-layer-guide.html
+---
+<h2>Why the data layer matters more in AI analytics</h2>
+                        <p>LLM reporting depends on clean, consistent event data. A messy data layer makes every AI summary unreliable.</p>
+
+                        <h2>Core principles</h2>
+                        <ul>
+                            <li>Consistency in event names</li>
+                            <li>Clear parameter definitions</li>
+                            <li>Stable naming conventions</li>
+                            <li>Documentation for every event</li>
+                        </ul>
+
+                        <h2>My recommended model</h2>
+                        <ul>
+                            <li>event: form_submit, lead_generated</li>
+                            <li>page_type: homepage, pricing, product</li>
+                            <li>cta_text: label clicked</li>
+                            <li>value: revenue or lead score</li>
+                            <li>item_id or plan_id</li>
+                        </ul>
+
+                        <h2>GTM implementation tips</h2>
+                        <ul>
+                            <li>One GA4 config tag per property</li>
+                            <li>Trigger events, not page loads</li>
+                            <li>Normalize values with lookup tables</li>
+                        </ul>
+
+                        <h2>QA checklist</h2>
+                        <ul>
+                            <li>Events fire once</li>
+                            <li>Parameters populated everywhere</li>
+                            <li>DebugView matches GTM preview</li>
+                        </ul>
+

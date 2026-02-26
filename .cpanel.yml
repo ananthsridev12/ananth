@@ -1,9 +1,5 @@
-deployment:
+﻿deployment:
   tasks:
     - export DEPLOYPATH=/home1/de2shrnx/ananth.easi7.in/
-    - /bin/cp -R assets $DEPLOYPATH
-    - /bin/cp -R blog $DEPLOYPATH
-    - /bin/cp -R includes $DEPLOYPATH
-    - /bin/cp -R .well-known $DEPLOYPATH
-    - /bin/cp *.html $DEPLOYPATH
-    - /bin/cp .cpanel.yml $DEPLOYPATH
+    - /bin/cp -R _site/* $DEPLOYPATH
+

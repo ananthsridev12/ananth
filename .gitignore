@@ -1,3 +1,4 @@
-_site/
-.jekyll-cache/
-.sass-cache/
+# Jekyll build output is committed for static deploy
+# _site/
+# .jekyll-cache/
+# .sass-cache/

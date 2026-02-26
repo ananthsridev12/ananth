@@ -1,0 +1,70 @@
+﻿---
+layout: default
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "author": {"@type": "Person", "name": "Ananth Sridev"},
+  "publisher": {"@type": "Person", "name": "Ananth Sridev"},
+  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date: '%Y-%m-%d' }}",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "{{ page.url | absolute_url }}"}
+}
+</script>
+
+<article class="blog-post-page">
+    <div class="container">
+        <header class="post-header">
+            <div class="post-meta-large">
+                <span class="category {{ page.category_class }}">{{ page.category }}</span>
+                <span class="date">{{ page.date | date: "%B %-d, %Y" }}</span>
+                <span class="read-time">{{ page.read_time }}</span>
+            </div>
+            <h1>{{ page.title }}</h1>
+            <p class="post-excerpt">{{ page.description }}</p>
+            <div class="author-info"><div class="author-details"><strong>Ananth Sridev</strong><span>Digital Marketing Specialist</span></div></div>
+        </header>
+
+        <div class="post-layout">
+            <div class="post-main">
+                <div class="post-content">
+                    {{ content }}
+                </div>
+            </div>
+
+            <aside class="post-sidebar">
+                <div class="sidebar-card">
+                    <h3>Related posts</h3>
+                    <ul class="sidebar-list">
+                        {% assign related = site.posts | where: "category", page.category %}
+                        {% assign related_filtered = related | where_exp: "p", "p.url != page.url" %}
+                        {% if related_filtered.size > 0 %}
+                            {% for post in related_filtered limit:5 %}
+                            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                            {% endfor %}
+                        {% else %}
+                            {% for post in site.posts limit:5 %}
+                            {% if post.url != page.url %}
+                            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                            {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h3>AI-ready checklist</h3>
+                    <ul class="sidebar-list">
+                        <li>Clear headings</li>
+                        <li>Structured data</li>
+                        <li>Clean tracking</li>
+                        <li>Consistent naming</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</article>
+

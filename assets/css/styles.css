@@ -982,6 +982,112 @@ footer {
     transform: translateY(-5px);
 }
 
+/* Blog Post Page */
+.blog-post-page {
+    padding: 120px 0 80px;
+    background: white;
+}
+
+.post-header {
+    margin-bottom: 2.5rem;
+}
+
+.post-meta-large {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post-meta-large .category {
+    background: var(--primary);
+    color: white;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.post-meta-large .category.seo { background: #10B981; }
+.post-meta-large .category.ppc { background: #F59E0B; }
+.post-meta-large .category.analytics { background: #6366F1; }
+.post-meta-large .category.strategy { background: #EC4899; }
+.post-meta-large .category.automation { background: #8B5CF6; }
+
+.post-excerpt {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-top: 0.5rem;
+}
+
+.post-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.post-content h2 {
+    margin: 2rem 0 0.75rem;
+    font-size: 1.6rem;
+    color: var(--dark);
+}
+
+.post-content h3 {
+    margin: 1.5rem 0 0.6rem;
+    font-size: 1.2rem;
+    color: var(--dark);
+}
+
+.post-content p,
+.post-content li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+.post-sidebar {
+    position: sticky;
+    top: 110px;
+}
+
+.sidebar-card {
+    background: #F8FAFC;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: var(--secondary);
+}
+
+.sidebar-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar-list li {
+    margin-bottom: 0.6rem;
+}
+
+.sidebar-list a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.sidebar-list a:hover {
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .footer-content {
@@ -1000,6 +1106,14 @@ footer {
     
     .featured-post {
         grid-template-columns: 1fr;
+    }
+
+    .post-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-sidebar {
+        position: static;
     }
     
     .contact-grid {

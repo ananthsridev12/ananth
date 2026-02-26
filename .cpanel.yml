@@ -1,5 +1,5 @@
-﻿deployment:
+deployment:
   tasks:
     - export DEPLOYPATH=/home1/de2shrnx/ananth.easi7.in/
+    - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -R _site/* $DEPLOYPATH
-

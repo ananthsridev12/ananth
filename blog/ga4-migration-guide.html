@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Complete GA4 Migration Guide for 2026 | Ananth Sridev</title>
+    <meta name="description" content="Universal Analytics is gone. Here is my practical guide to migrating to GA4, setting up clean tracking, and avoiding the mistakes that wreck data.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo">Ananth<span>Sridev</span></a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../services.html" class="nav-link">Services</a></li>
+                <li><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="../case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="../blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="../tech-stack.html" class="nav-link">Tech Stack</a></li>
+                <li><a href="../resume.html" class="nav-link">Resume</a></li>
+                <li><a href="../contact.html" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <article class="blog-post-page">
+        <div class="container-narrow">
+            <header class="post-header">
+                <div class="post-meta-large">
+                    <span class="category seo">SEO</span>
+                    <span class="date">February 10, 2026</span>
+                    <span class="read-time">8 min read</span>
+                </div>
+                <h1>The Complete GA4 Migration Guide for 2026</h1>
+                <p class="post-excerpt">
+                    Universal Analytics is gone. Here is my practical guide to migrating to GA4, setting up clean tracking, and avoiding the mistakes that wreck data.
+                </p>
+                <div class="author-info">
+                    <div class="author-details">
+                        <strong>Ananth Sridev</strong>
+                        <span>Digital Marketing Specialist</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <h2>Why GA4 migration matters</h2>
+                <p>Universal Analytics is officially sunset. If you have not moved to GA4, you are making decisions without full visibility. The data model is different enough that a quick copy-paste migration usually creates broken reports, misattributed conversions, and wasted ad spend.</p>
+                <p>I have helped multiple teams move from UA to GA4, and the pattern is consistent: the teams that plan the migration get reliable data within weeks, and the teams that rush it spend months untangling event chaos.</p>
+
+                <h2>The shift: sessions to events</h2>
+                <p>UA was session-first. GA4 is event-first. Every interaction is an event, and parameters provide the context. That means you need to think about the events that truly matter to your business.</p>
+                <ul>
+                    <li>Core events: page_view, scroll, form_submit, generate_lead, purchase</li>
+                    <li>Context parameters: page_title, page_location, button_text, value</li>
+                    <li>User properties: customer_type, plan_tier, lifecycle_stage</li>
+                </ul>
+
+                <h2>Step 1: set up the property the right way</h2>
+                <ol>
+                    <li>Create the web data stream.</li>
+                    <li>Enable Enhanced Measurement, then audit it.</li>
+                    <li>Set data retention to 14 months.</li>
+                    <li>Enable Google Signals if consent allows.</li>
+                    <li>Link GA4 to Google Ads and Search Console.</li>
+                </ol>
+
+                <h2>Step 2: build an event map</h2>
+                <ul>
+                    <li>Acquisition events: ad click, landing page view</li>
+                    <li>Activation events: key page depth, key CTA click</li>
+                    <li>Conversion events: lead form submit, purchase, booked call</li>
+                    <li>Retention events: login, feature use, repeat purchase</li>
+                </ul>
+
+                <h2>Step 3: implement with GTM and a real data layer</h2>
+                <p>Hardcoding GA4 on the site is fragile. I always use Google Tag Manager with a structured data layer. It allows clean event naming and scalable tracking.</p>
+                <p>A good data layer gives you consistent parameters like product_id, plan_name, or lead_source across the site. Without it, reporting becomes a guessing game.</p>
+
+                <h2>Step 4: define conversions carefully</h2>
+                <p>In GA4, conversions are just events you mark as important. My rule: 3 to 5 conversions per property, mapped to actual business outcomes.</p>
+
+                <h2>Step 5: recreate your UA reports the smart way</h2>
+                <ul>
+                    <li>Landing pages with conversion rate</li>
+                    <li>Traffic source performance by channel</li>
+                    <li>Funnel analysis from entry to conversion</li>
+                    <li>Path analysis for drop-offs</li>
+                </ul>
+
+                <h2>Common migration pitfalls</h2>
+                <ol>
+                    <li>Tracking everything without a strategy</li>
+                    <li>Ignoring internal traffic</li>
+                    <li>Not testing events</li>
+                    <li>No BigQuery export</li>
+                </ol>
+
+                <h2>Final advice</h2>
+                <p>A GA4 migration is not a one-day task. It is a tracking redesign. When you treat it that way, GA4 becomes a growth tool, not just another analytics platform.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">Ananth<span>Sridev</span></div>
+                <p class="footer-bio">Data-driven Digital Marketing Specialist with 6+ years of expertise in SEO, performance marketing, analytics, and marketing automation. I help businesses scale through measurable, data-backed strategies.</p>
+                <div class="footer-stats">
+                    <div class="stat-item">
+                        <strong>6+</strong>
+                        <span>Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>150+</strong>
+                        <span>Projects</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About Me</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li><a href="../case-studies.html">Case Studies</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../tech-stack.html">Tech Stack</a></li>
+                    <li><a href="../resume.html">Resume</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Me</h4>
+                <div class="social-media-links">
+                    <a href="https://www.linkedin.com/in/ananthsridev/" target="_blank" class="social-icon linkedin" rel="noopener">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Ananth Sridev. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

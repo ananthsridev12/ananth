@@ -1,40 +1,35 @@
----
-layout: null
-title: "Digital Marketing Blog | Ananth Sridev"
-description: "Insights on SEO, performance marketing, analytics, and digital strategy from a data-driven marketing specialist."
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.description }}">
+    <title>Digital Marketing Blog | Ananth Sridev</title>
+    <meta name="description" content="Insights on SEO, performance marketing, analytics, and digital strategy from a data-driven marketing specialist.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 <!-- Navigation -->
     <nav>
         <div class="container">
-            <a href="{{ '/index.html' | relative_url }}" class="logo">Ananth<span>Sridev</span></a>
+            <a href="index.html" class="logo">Ananth<span>Sridev</span></a>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul id="navMenu">
-                <li><a href="{{ '/index.html' | relative_url }}" class="nav-link">Home</a></li>
-                <li><a href="{{ '/about.html' | relative_url }}" class="nav-link">About</a></li>
-                <li><a href="{{ '/services.html' | relative_url }}" class="nav-link">Services</a></li>
-                <li><a href="{{ '/portfolio.html' | relative_url }}" class="nav-link">Portfolio</a></li>
-                <li><a href="{{ '/case-studies.html' | relative_url }}" class="nav-link">Case Studies</a></li>
-                <li><a href="{{ '/blog.html' | relative_url }}" class="nav-link active">Blog</a></li>
-                <li><a href="{{ '/tech-stack.html' | relative_url }}" class="nav-link">Tech Stack</a></li>
-                <li><a href="{{ '/resume.html' | relative_url }}" class="nav-link">Resume</a></li>
-                <li><a href="{{ '/contact.html' | relative_url }}" class="nav-link nav-cta">Contact</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="tech-stack.html" class="nav-link">Tech Stack</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -50,44 +45,187 @@ description: "Insights on SEO, performance marketing, analytics, and digital str
                 </p>
             </div>
 
-            {% assign featured = site.posts | first %}
-            {% if featured %}
+            <!-- Featured Blog Post -->
             <div class="featured-post">
                 <div class="featured-image">
                     <span class="featured-badge">Featured</span>
                 </div>
                 <div class="featured-content">
                     <div class="post-meta">
-                        <span class="category {{ featured.category_class | default: 'seo' }}">{{ featured.category | default: 'SEO' }}</span>
-                        <span class="date">{{ featured.date | date: "%B %-d, %Y" }}</span>
-                        <span class="read-time">{{ featured.read_time | default: "6 min read" }}</span>
+                        <span class="category seo">SEO</span>
+                        <span class="date">February 10, 2026</span>
+                        <span class="read-time">8 min read</span>
                     </div>
-                    <h2><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
-                    <p>{{ featured.description }}</p>
-                    <a href="{{ featured.url | relative_url }}" class="read-more-btn">Read Article ?</a>
+                    <h2><a href="blog/ga4-migration-guide.html">The Complete GA4 Migration Guide for 2026</a></h2>
+                    <p>Universal Analytics is gone. Here is my practical guide to migrating to GA4, setting up clean tracking, and avoiding the mistakes that wreck data.</p>
+                    <a href="blog/ga4-migration-guide.html" class="read-more-btn">Read Article ?</a>
                 </div>
             </div>
-            {% endif %}
 
+            <!-- Blog Grid -->
             <div class="blog-grid">
-                {% for post in site.posts offset:1 limit:9 %}
+                <!-- Blog Post 1 -->
                 <article class="blog-card">
                     <div class="blog-image">
-                        <span class="blog-category {{ post.category_class | default: 'seo' }}">{{ post.category | default: 'SEO' }}</span>
+                        <span class="blog-category seo">SEO</span>
                     </div>
                     <div class="blog-content">
                         <div class="post-meta-small">
-                            <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
-                            <span class="read-time">{{ post.read_time | default: "6 min read" }}</span>
+                            <span class="date">February 8, 2026</span>
+                            <span class="read-time">6 min read</span>
                         </div>
-                        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                        <p>{{ post.description }}</p>
-                        <a href="{{ post.url | relative_url }}" class="read-more">Read More ?</a>
+                        <h3><a href="blog/answer-engine-optimization.html">Answer Engine Optimization: SEO's New Frontier</a></h3>
+                        <p>AI search is changing how people discover brands. Here is how I structure AEO so content wins in ChatGPT, Perplexity, and SGE-style results.</p>
+                        <a href="blog/answer-engine-optimization.html" class="read-more">Read More ?</a>
                     </div>
                 </article>
-                {% endfor %}
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category ppc">PPC</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta-small">
+                            <span class="date">February 5, 2026</span>
+                            <span class="read-time">7 min read</span>
+                        </div>
+                        <h3><a href="blog/google-ads-automation.html">Google Ads Automation: When to Use It (and When Not To)</a></h3>
+                        <p>Smart Bidding is powerful, but it is not always the answer. Here is how I decide when automation helps and when manual control wins.</p>
+                        <a href="blog/google-ads-automation.html" class="read-more">Read More ?</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category analytics">Analytics</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta-small">
+                            <span class="date">February 1, 2026</span>
+                            <span class="read-time">10 min read</span>
+                        </div>
+                        <h3><a href="blog/gtm-data-layer-guide.html">Mastering Google Tag Manager: Data Layer Best Practices</a></h3>
+                        <p>A clean data layer is the foundation of accurate tracking. Here is how I structure it so GA4 and ad platforms stay reliable.</p>
+                        <a href="blog/gtm-data-layer-guide.html" class="read-more">Read More ?</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category strategy">Strategy</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta-small">
+                            <span class="date">January 28, 2026</span>
+                            <span class="read-time">5 min read</span>
+                        </div>
+                        <h3><a href="blog/marketing-attribution-models.html">Marketing Attribution Models: Which One Is Right for You?</a></h3>
+                        <p>First-click, last-click, linear, or data-driven? I break down how I choose attribution models based on funnel maturity and data quality.</p>
+                        <a href="blog/marketing-attribution-models.html" class="read-more">Read More ?</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category seo">SEO</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta-small">
+                            <span class="date">January 25, 2026</span>
+                            <span class="read-time">8 min read</span>
+                        </div>
+                        <h3><a href="blog/schema-markup-guide.html">Schema Markup for SEO: The Complete Implementation Guide</a></h3>
+                        <p>Rich results drive clicks. Here is my practical approach to implementing schema that actually moves organic traffic.</p>
+                        <a href="blog/schema-markup-guide.html" class="read-more">Read More ?</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category automation">Automation</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta-small">
+                            <span class="date">January 20, 2026</span>
+                            <span class="read-time">6 min read</span>
+                        </div>
+                        <h3><a href="blog/email-automation-workflows.html">7 Email Automation Workflows That Convert</a></h3>
+                        <p>Stop sending one-off emails. These are the automation sequences I build to nurture leads and drive revenue consistently.</p>
+                        <a href="blog/email-automation-workflows.html" class="read-more">Read More ?</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 7 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category analytics">Analytics</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta-small">
+                            <span class="date">January 15, 2026</span>
+                            <span class="read-time">9 min read</span>
+                        </div>
+                        <h3><a href="blog/conversion-rate-optimization.html">Conversion Rate Optimization: A Data-Driven Framework</a></h3>
+                        <p>Double your conversion rate without doubling traffic. Here is the systematic CRO framework I use on every project.</p>
+                        <a href="blog/conversion-rate-optimization.html" class="read-more">Read More ?</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 8 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category ppc">PPC</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta-small">
+                            <span class="date">January 10, 2026</span>
+                            <span class="read-time">7 min read</span>
+                        </div>
+                        <h3><a href="blog/meta-ads-strategy-2026.html">Meta Ads Strategy for 2026: What's Actually Working</a></h3>
+                        <p>iOS changes killed old tactics. This is the Meta Ads playbook I use now for lead gen and e-commerce.</p>
+                        <a href="blog/meta-ads-strategy-2026.html" class="read-more">Read More ?</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 9 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category seo">SEO</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta-small">
+                            <span class="date">January 5, 2026</span>
+                            <span class="read-time">6 min read</span>
+                        </div>
+                        <h3><a href="blog/technical-seo-checklist.html">Technical SEO Checklist: 50 Points to Audit Your Site</a></h3>
+                        <p>A practical technical SEO checklist covering crawling, indexing, speed, and on-site hygiene. This is the list I use before any major campaign.</p>
+                        <a href="blog/technical-seo-checklist.html" class="read-more">Read More ?</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 10 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category strategy">Strategy</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta-small">
+                            <span class="date">December 30, 2025</span>
+                            <span class="read-time">5 min read</span>
+                        </div>
+                        <h3><a href="blog/b2b-lead-generation-strategy.html">B2B Lead Generation: A Practical 2026 Playbook</a></h3>
+                        <p>Cold outreach is not dead, but it is not enough. Here is the B2B lead gen system I use combining content, ads, and automation.</p>
+                        <a href="blog/b2b-lead-generation-strategy.html" class="read-more">Read More ?</a>
+                    </div>
+                </article>
             </div>
 
+            <!-- Newsletter Signup -->
             <div class="newsletter-section">
                 <div class="newsletter-content">
                     <h2>Get Marketing Insights Delivered</h2>
@@ -106,6 +244,7 @@ description: "Insights on SEO, performance marketing, analytics, and digital str
     <!-- Footer -->
     <footer>
         <div class="footer-content">
+            <!-- Column 1: About Me -->
             <div class="footer-section">
                 <div class="footer-logo">Ananth<span>Sridev</span></div>
                 <p class="footer-bio">
@@ -122,21 +261,23 @@ description: "Insights on SEO, performance marketing, analytics, and digital str
                     </div>
                 </div>
             </div>
-
+            
+            <!-- Column 2: Quick Links -->
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul class="footer-menu">
-                    <li><a href="{{ '/index.html' | relative_url }}">Home</a></li>
-                    <li><a href="{{ '/about.html' | relative_url }}">About Me</a></li>
-                    <li><a href="{{ '/services.html' | relative_url }}">Services</a></li>
-                    <li><a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a></li>
-                    <li><a href="{{ '/case-studies.html' | relative_url }}">Case Studies</a></li>
-                    <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
-                    <li><a href="{{ '/tech-stack.html' | relative_url }}">Tech Stack</a></li>
-                    <li><a href="{{ '/resume.html' | relative_url }}">Resume</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="tech-stack.html">Tech Stack</a></li>
+                    <li><a href="resume.html">Resume</a></li>
                 </ul>
             </div>
-
+            
+            <!-- Column 3: Social Media -->
             <div class="footer-section">
                 <h4>Follow Me</h4>
                 <div class="social-media-links">
@@ -148,12 +289,13 @@ description: "Insights on SEO, performance marketing, analytics, and digital str
                 </div>
             </div>
         </div>
+        
         <div class="footer-bottom">
             <p>© 2026 Ananth Sridev. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="{{ '/assets/js/config.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

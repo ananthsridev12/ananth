@@ -15,7 +15,7 @@ permalink: /portfolio/crm-automation.html
         </div>
 
         <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 2rem 0;">
-            {% for tag in "CRM,Email Marketing,Workflow Automation,WhatsApp API,Lead Scoring,GTM" | split: "," %}
+            {% assign tool_tags = "CRM,Email Marketing,Workflow Automation,WhatsApp API,Lead Scoring,GTM" | split: "," %}{% for tag in tool_tags %}
             <span style="background: #EFF6FF; color: #2563EB; padding: 0.5rem 1.2rem; border-radius: 20px; font-size: 1rem; font-weight: 600;">{{ tag }}</span>
             {% endfor %}
         </div>

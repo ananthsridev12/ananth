@@ -55,7 +55,7 @@ permalink: /portfolio/dhanlap-infrastructure.html
         <div style="background: #F8FAFC; padding: 2rem; border-radius: 12px; margin-bottom: 3rem;">
             <h3 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">Tools Used</h3>
             <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-                {% for tag in "GA4,GTM,PostHog,Looker Studio,Schema Markup,CRM,Email Automation" | split: "," %}
+                {% assign tool_tags = "GA4,GTM,PostHog,Looker Studio,Schema Markup,CRM,Email Automation" | split: "," %}{% for tag in tool_tags %}
                 <span style="background: #EFF6FF; color: #2563EB; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">{{ tag }}</span>
                 {% endfor %}
             </div>

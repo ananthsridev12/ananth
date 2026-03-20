@@ -27,7 +27,7 @@ permalink: /blog.html
                 </div>
                 <h2><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
                 <p>{{ featured.description }}</p>
-                <a href="{{ featured.url | relative_url }}" class="read-more-btn">Read Article ?</a>
+                <a href="{{ featured.url | relative_url }}" class="read-more-btn">Read Article &rarr;</a>
             </div>
         </div>
         {% endif %}
@@ -45,7 +45,7 @@ permalink: /blog.html
                     </div>
                     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                     <p>{{ post.description }}</p>
-                    <a href="{{ post.url | relative_url }}" class="read-more">Read More ?</a>
+                    <a href="{{ post.url | relative_url }}" class="read-more">Read More &rarr;</a>
                 </div>
             </article>
             {% endfor %}
@@ -58,6 +58,7 @@ permalink: /blog.html
                 <form class="newsletter-form" action="https://formsubmit.co/m.ananthsridev@gmail.com" method="POST">
                     <input type="hidden" name="_subject" value="New Newsletter Subscription">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://ananth.easi7.in/thank-you.html">
                     <input type="email" name="email" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
                 </form>

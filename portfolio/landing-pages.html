@@ -1,0 +1,64 @@
+---
+layout: page
+title: "High-Converting Landing Pages | Portfolio | Ananth Sridev"
+description: "Designed 10+ PPC landing pages achieving 8.5% average conversion rate and 42% bounce rate reduction."
+permalink: /portfolio/landing-pages.html
+---
+<section class="page-section">
+    <div class="container-narrow">
+        <div style="margin-bottom: 2rem;"><a href="{{ '/portfolio.html' | relative_url }}" style="color: #2563EB; text-decoration: none;">&larr; Back to Portfolio</a></div>
+
+        <div class="section-header">
+            <div class="section-tag">Web Development</div>
+            <h1 class="section-title">High-Converting Landing Pages</h1>
+            <p class="section-subtitle">Designed and developed 10+ landing pages optimised for PPC campaigns with continuous A/B testing.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 3rem 0;">
+            <div style="background: #2563EB; color: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: 700;">8.5%</div>
+                <div style="opacity: 0.9;">Avg Conversion Rate</div>
+            </div>
+            <div style="background: #0F172A; color: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: 700;">&minus;42%</div>
+                <div style="opacity: 0.9;">Bounce Rate Reduction</div>
+            </div>
+        </div>
+
+        <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 2rem;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">The Challenge</h2>
+            <p style="color: #334155; line-height: 1.8;">PPC campaigns were driving traffic to generic website pages that weren't designed to convert. Quality scores were low, bounce rates were above 70%, and the client's cost-per-conversion was unsustainable.</p>
+        </div>
+
+        <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 2rem;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1.5rem;">What I Did</h2>
+            <ul style="color: #334155; line-height: 2; padding-left: 1.5rem;">
+                <li>Designed 10+ dedicated landing pages with message-match to ad copy</li>
+                <li>Applied CRO principles: single CTA, trust signals, social proof, urgency elements</li>
+                <li>Implemented A/B tests on headlines, form length, CTA button colour and copy</li>
+                <li>Optimised page speed to under 2 seconds on mobile (critical for PPC quality score)</li>
+                <li>Added GTM event tracking to measure micro-conversions (scroll depth, CTA hover, form start)</li>
+                <li>Used heatmap analysis to identify and fix friction points</li>
+                <li>Built dynamic keyword insertion variants for search campaign alignment</li>
+            </ul>
+        </div>
+
+        <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 2rem;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">Outcome</h2>
+            <p style="color: #334155; line-height: 1.8;">Average conversion rate across all landing pages reached 8.5% (industry average: 2&ndash;3%). Bounce rate dropped 42%. Google Ads Quality Scores improved from 4 to 8&ndash;9, reducing cost-per-click by 30%.</p>
+        </div>
+
+        <div style="background: #F8FAFC; padding: 2rem; border-radius: 12px; margin-bottom: 3rem;">
+            <h3 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">Tools Used</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                {% for tag in "WordPress,GTM,GA4,A/B Testing,Heatmaps,Google Ads,CRO" | split: "," %}
+                <span style="background: #EFF6FF; color: #2563EB; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">{{ tag }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="{{ '/contact.html' | relative_url }}" class="cta-button">Work With Me &rarr;</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+---
+layout: page
+title: "Custom Dashboard & Reporting System | Portfolio | Ananth Sridev"
+description: "Built an automated marketing dashboard using Looker Studio, BigQuery, and custom API integrations."
+permalink: /portfolio/custom-dashboard.html
+---
+<section class="page-section">
+    <div class="container-narrow">
+        <div style="margin-bottom: 2rem;"><a href="{{ '/portfolio.html' | relative_url }}" style="color: #2563EB; text-decoration: none;">&larr; Back to Portfolio</a></div>
+
+        <div class="section-header">
+            <div class="section-tag">Analytics &amp; Reporting</div>
+            <h1 class="section-title">Custom Dashboard &amp; Reporting System</h1>
+            <p class="section-subtitle">Replaced 4 manual weekly reports with a single automated, always-current dashboard.</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 2rem 0;">
+            {% for tag in "Looker Studio,BigQuery,SQL,GA4,Google Ads API,Automation" | split: "," %}
+            <span style="background: #EFF6FF; color: #2563EB; padding: 0.5rem 1.2rem; border-radius: 20px; font-size: 1rem; font-weight: 600;">{{ tag }}</span>
+            {% endfor %}
+        </div>
+
+        <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 2rem;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">The Challenge</h2>
+            <p style="color: #334155; line-height: 1.8;">The marketing team was spending 6+ hours every week manually pulling data from GA4, Google Ads, Meta Ads, and their CRM to build Excel reports. Data was always 1&ndash;3 days stale by the time it reached decision-makers, and there was no single source of truth.</p>
+        </div>
+
+        <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 2rem;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1.5rem;">What I Did</h2>
+            <ul style="color: #334155; line-height: 2; padding-left: 1.5rem;">
+                <li>Connected GA4 BigQuery export to centralise all website behaviour data</li>
+                <li>Pulled Google Ads and Meta Ads data into BigQuery via scheduled data transfers</li>
+                <li>Wrote SQL queries to create clean, aggregated reporting tables (CPL, ROAS, revenue by channel)</li>
+                <li>Built a Looker Studio dashboard with 5 pages: Executive Summary, Paid Media, Organic, Email, and Pipeline</li>
+                <li>Set up scheduled email delivery of the dashboard every Monday morning</li>
+                <li>Added alert thresholds&mdash;if CPL exceeds target by 20%, the dashboard highlights it in red</li>
+                <li>Documented the full data model so the internal team could maintain and extend it</li>
+            </ul>
+        </div>
+
+        <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 3rem;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">Outcome</h2>
+            <p style="color: #334155; line-height: 1.8;">Weekly reporting time dropped from 6 hours to 30 minutes (just for review, no manual data pulling). The executive team now has real-time visibility into campaign performance. Data-driven budget decisions are made weekly instead of monthly.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="{{ '/contact.html' | relative_url }}" class="cta-button">Work With Me &rarr;</a>
+        </div>
+    </div>
+</section>

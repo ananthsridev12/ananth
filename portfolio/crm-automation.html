@@ -1,0 +1,50 @@
+---
+layout: page
+title: "CRM & Email Automation Setup | Portfolio | Ananth Sridev"
+description: "Designed and implemented automated lead nurturing workflows and CRM integration for a fintech platform."
+permalink: /portfolio/crm-automation.html
+---
+<section class="page-section">
+    <div class="container-narrow">
+        <div style="margin-bottom: 2rem;"><a href="{{ '/portfolio.html' | relative_url }}" style="color: #2563EB; text-decoration: none;">&larr; Back to Portfolio</a></div>
+
+        <div class="section-header">
+            <div class="section-tag">Marketing Automation</div>
+            <h1 class="section-title">CRM &amp; Email Automation Setup</h1>
+            <p class="section-subtitle">End-to-end lead nurturing system that converted cold leads into sales-ready prospects automatically.</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 2rem 0;">
+            {% for tag in "CRM,Email Marketing,Workflow Automation,WhatsApp API,Lead Scoring,GTM" | split: "," %}
+            <span style="background: #EFF6FF; color: #2563EB; padding: 0.5rem 1.2rem; border-radius: 20px; font-size: 1rem; font-weight: 600;">{{ tag }}</span>
+            {% endfor %}
+        </div>
+
+        <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 2rem;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">The Challenge</h2>
+            <p style="color: #334155; line-height: 1.8;">The sales team was manually following up with every lead, regardless of intent signals. This wasted time on cold leads while hot prospects went uncontacted. There was no system to segment, score, or nurture leads based on behaviour.</p>
+        </div>
+
+        <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 2rem;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1.5rem;">What I Did</h2>
+            <ul style="color: #334155; line-height: 2; padding-left: 1.5rem;">
+                <li>Integrated the website form with CRM via webhook&mdash;every lead captured instantly</li>
+                <li>Built a lead scoring model based on page visits, time on site, and form interactions</li>
+                <li>Designed a 7-step email nurturing sequence triggered by lead score thresholds</li>
+                <li>Set up WhatsApp automation for immediate response to high-intent leads</li>
+                <li>Created deal pipeline stages in CRM aligned to the sales team's workflow</li>
+                <li>Configured re-engagement sequences for leads inactive for 14+ days</li>
+                <li>Built reporting dashboard tracking MQL-to-SQL conversion rate weekly</li>
+            </ul>
+        </div>
+
+        <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 3rem;">
+            <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">Outcome</h2>
+            <p style="color: #334155; line-height: 1.8;">The sales team now only handles leads that have scored above the qualification threshold. Lead-to-call booking rate improved by 40%. WhatsApp automation alone brought response time down from 4 hours to under 5 minutes for hot leads.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="{{ '/contact.html' | relative_url }}" class="cta-button">Work With Me &rarr;</a>
+        </div>
+    </div>
+</section>

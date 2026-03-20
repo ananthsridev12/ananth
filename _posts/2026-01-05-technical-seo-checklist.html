@@ -9,33 +9,98 @@ read_time: "6 min read"
 og_type: "article"
 permalink: /blog/technical-seo-checklist.html
 ---
-<h2>Crawl and index</h2>
-                        <ul>
-                            <li>Robots.txt is accurate</li>
-                            <li>XML sitemap is clean</li>
-                            <li>Canonicals are consistent</li>
-                            <li>Important pages are indexed</li>
-                        </ul>
+<p>A technical SEO audit without a structured checklist is how small issues get missed and compound into ranking problems over months. This is the actual list I work through when auditing a new client's site — 50 checkpoints across crawlability, Core Web Vitals, structured data, site architecture, and AI readiness. I've grouped them into categories so you can prioritise by impact and work through them systematically.</p>
 
-                        <h2>Performance and UX</h2>
-                        <ul>
-                            <li>LCP under 2.5 seconds</li>
-                            <li>CLS under 0.1</li>
-                            <li>TTFB under 800ms</li>
-                            <li>Images optimized</li>
-                        </ul>
+<h2>Crawlability and Indexation</h2>
 
-                        <h2>Architecture</h2>
-                        <ul>
-                            <li>Shallow click depth</li>
-                            <li>Strong internal linking</li>
-                            <li>No redirect chains</li>
-                        </ul>
+<p>If Googlebot can't crawl your pages efficiently, nothing else matters. Start here.</p>
 
-                        <h2>AI readiness</h2>
-                        <ul>
-                            <li>Schema markup validated</li>
-                            <li>Author and date visible</li>
-                            <li>Content structured with clear headings</li>
-                        </ul>
+<ul>
+  <li><strong>Robots.txt is accurate and not blocking critical resources.</strong> Fetch your robots.txt directly (domain.com/robots.txt) and verify that JS, CSS, and key page paths aren't being blocked. This is a shockingly common mistake on sites that have gone through CMS migrations.</li>
+  <li><strong>XML sitemap is submitted and validated in Search Console.</strong> The sitemap should only include canonical, indexable URLs. Remove noindex pages, paginated URLs (unless paginated correctly), and parameter-based duplicates.</li>
+  <li><strong>Canonical tags are consistent and pointing to the right URL.</strong> Check that self-referencing canonicals exist on every page and that canonicals aren't creating loops or pointing to redirected URLs.</li>
+  <li><strong>No important pages are returning 4xx or 5xx errors.</strong> Run a crawl with Screaming Frog or Sitebulb and filter for non-200 status codes. Cross-reference with Search Console's Coverage report.</li>
+  <li><strong>Crawl budget is not being wasted on low-value pages.</strong> Session-based URLs, infinite scroll parameters, and filter combinations can bloat crawl budget. Noindex or block these patterns in robots.txt.</li>
+  <li><strong>Pagination is handled correctly.</strong> For paginated content, use self-referencing canonicals on each page and ensure that page 2+ isn't noindexed accidentally.</li>
+  <li><strong>Hreflang is implemented correctly for multilingual sites.</strong> Hreflang errors are common — bidirectional tagging must be present, and the return tag must exist on the alternate page.</li>
+  <li><strong>No orphan pages exist.</strong> Pages with no internal links pointing to them are invisible to crawlers even if they're in the sitemap. Run a crawl and cross-reference with your sitemap to find them.</li>
+  <li><strong>Google Search Console shows no manual actions or security issues.</strong> Check the Security and Manual Actions reports — these override any ranking work you do.</li>
+  <li><strong>JavaScript rendering is not hiding critical content.</strong> If your site is heavily JS-rendered, use Search Console's URL Inspection tool to see the rendered HTML. Content that only appears after JS execution may not be indexed.</li>
+</ul>
 
+<h2>Core Web Vitals</h2>
+
+<p>Core Web Vitals are Google's user experience signals and a confirmed ranking factor. The current metrics that matter are LCP, CLS, and INP.</p>
+
+<ul>
+  <li><strong>LCP (Largest Contentful Paint) is under 2.5 seconds.</strong> The most common LCP elements are hero images and above-the-fold headings. Optimise by preloading the LCP image, using a CDN, and eliminating render-blocking resources above the fold.</li>
+  <li><strong>CLS (Cumulative Layout Shift) is under 0.1.</strong> CLS is usually caused by images without explicit dimensions, late-loading ads, or web fonts causing text shifts. Add width and height attributes to all images and reserve space for ad slots.</li>
+  <li><strong>INP (Interaction to Next Paint) is under 200ms.</strong> INP replaced FID in 2024 and measures responsiveness across all interactions on the page. Heavy main-thread JS is the primary culprit. Defer non-critical scripts and break up long tasks.</li>
+  <li><strong>TTFB (Time to First Byte) is under 800ms.</strong> TTFB is a server-side metric. Improve it with server-side caching, a CDN, and reducing server processing time for dynamic pages.</li>
+  <li><strong>Images are served in WebP or AVIF format.</strong> Both formats deliver significantly smaller file sizes than JPEG or PNG with no visible quality difference for most use cases.</li>
+  <li><strong>Images are lazy-loaded below the fold.</strong> Use the native loading="lazy" attribute on all images that aren't in the initial viewport.</li>
+  <li><strong>Render-blocking resources are eliminated or deferred.</strong> CSS should be inlined for critical above-the-fold styles; non-critical CSS and JS should be deferred or loaded asynchronously.</li>
+  <li><strong>Font loading is optimised.</strong> Use font-display: swap, preload your primary font file, and subset fonts to include only the characters you use.</li>
+  <li><strong>Third-party scripts are audited and non-essential ones removed.</strong> Every third-party tag adds latency. Run PageSpeed Insights and review the third-party summary — eliminate any tag that isn't actively driving value.</li>
+  <li><strong>Field data in CrUX matches lab data in PageSpeed Insights.</strong> Lab data shows potential; field data shows reality. Gaps between the two indicate conditions (devices, network speeds) you're not testing for locally.</li>
+</ul>
+
+<h2>Structured Data and Schema</h2>
+
+<ul>
+  <li><strong>Article or BlogPosting schema is on all blog posts.</strong> Include author, datePublished, dateModified, headline, and image fields at minimum.</li>
+  <li><strong>Organization schema is on the homepage.</strong> Include name, url, logo, contactPoint, and sameAs (linking to all social profiles) to help search engines understand your entity.</li>
+  <li><strong>FAQ schema is used on appropriate pages.</strong> Only apply FAQ schema where genuine Q&A content exists on the page — Google penalises schema that misrepresents page content.</li>
+  <li><strong>BreadcrumbList schema is implemented site-wide.</strong> This helps search engines understand site hierarchy and often produces breadcrumb rich results in the SERP.</li>
+  <li><strong>LocalBusiness schema is implemented for location-based businesses.</strong> Include address, geo coordinates, openingHours, and telephone.</li>
+  <li><strong>All schema is implemented in JSON-LD format.</strong> JSON-LD is Google's preferred format — it's easier to manage than microdata and doesn't require changes to the HTML structure.</li>
+  <li><strong>All schema is validated in Google's Rich Results Test.</strong> Test both the live URL and the code snippet. Fix all errors before errors reach production.</li>
+  <li><strong>No schema is applied to content that isn't visible on the page.</strong> Schema that marks up hidden or non-existent content violates Google's guidelines and can result in a manual action.</li>
+  <li><strong>dateModified is updated when content is updated.</strong> Freshness signals matter for news and informational content — outdated modification dates can suppress rankings on time-sensitive queries.</li>
+  <li><strong>HowTo schema is implemented where step-by-step content exists.</strong> HowTo schema can trigger rich results with steps directly in the SERP, increasing click-through rate.</li>
+</ul>
+
+<h2>Site Architecture and Internal Linking</h2>
+
+<ul>
+  <li><strong>No important page is more than 3 clicks from the homepage.</strong> Deep pages receive less crawl budget and less PageRank. If something is important, it should be accessible shallowly.</li>
+  <li><strong>Internal links use descriptive anchor text.</strong> "Click here" and "read more" are wasted opportunities. Anchor text sends relevance signals — use natural, descriptive phrases that include your target keyword where appropriate.</li>
+  <li><strong>Redirect chains are eliminated.</strong> A → B → C should be cleaned to A → C. Every redirect in a chain costs crawl budget and dilutes link equity.</li>
+  <li><strong>No redirect loops exist.</strong> Page A redirecting to Page B which redirects back to Page A causes crawl errors. Run a crawl to detect these.</li>
+  <li><strong>All internal links point to canonical URLs.</strong> Linking to non-canonical versions of pages creates crawl confusion. Audit internal links and update them to point directly to the canonical destination.</li>
+  <li><strong>Pillar pages are well-linked from cluster content.</strong> Topic clusters work when the supporting pages consistently link back to the pillar, passing authority and signalling topical depth.</li>
+  <li><strong>Navigation includes keyword-relevant anchor text.</strong> Global navigation links are crawled on every page — the anchor text in navigation carries significant weight for the linked pages.</li>
+  <li><strong>Broken internal links are fixed.</strong> Internal 404s are both a user experience problem and a crawl efficiency problem. Run a monthly crawl to catch these.</li>
+</ul>
+
+<h2>Mobile-First Indexing</h2>
+
+<ul>
+  <li><strong>The mobile version of the site contains the same content as desktop.</strong> Google indexes the mobile version of your site. Any content that's collapsed, hidden, or removed on mobile may not be indexed.</li>
+  <li><strong>Font sizes are readable without zooming on mobile.</strong> Body text should be at least 16px. Smaller text forces users to zoom, which is a negative UX signal.</li>
+  <li><strong>Tap targets are large enough and spaced appropriately.</strong> Google's minimum recommended tap target size is 48x48px. Overlapping or too-close elements generate a poor mobile usability report in Search Console.</li>
+  <li><strong>Mobile-specific structured data matches desktop.</strong> If you serve different HTML to mobile users, the schema markup must be equivalent across both versions.</li>
+</ul>
+
+<h2>Log File Analysis</h2>
+
+<ul>
+  <li><strong>Log files confirm Googlebot is crawling priority pages frequently.</strong> Log file analysis shows you exactly which pages Googlebot visits, how often, and with what status codes. Pages that are frequently crawled but not ranking often have content quality issues. Pages that are rarely crawled may have crawl budget problems.</li>
+  <li><strong>Non-priority pages are receiving disproportionate crawl budget.</strong> If Googlebot spends 60% of its crawl budget on paginated category pages with no unique value, your important pages are getting starved. Use log files to identify and address this.</li>
+  <li><strong>Crawl frequency matches content update frequency.</strong> Pages you update regularly should be crawled more often. If they're not, check that the sitemap lastmod dates are being updated correctly.</li>
+</ul>
+
+<h2>AEO and AI Search Readiness</h2>
+
+<p>As AI Overviews and LLM-based search engines become a larger share of how content is discovered, technical SEO increasingly overlaps with Answer Engine Optimization. These checks prepare your site for that environment.</p>
+
+<ul>
+  <li><strong>Content is structured with clear H2 and H3 headings that match question intent.</strong> LLMs parse heading structure to identify what a page covers. Headings phrased as questions or direct statements are easier for AI systems to extract and cite.</li>
+  <li><strong>Author information is visible and linked to an author page with credentials.</strong> E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) is now more important than ever. Visible, credentialled authorship signals to both Google and LLMs that the content is trustworthy.</li>
+  <li><strong>Publication date and last modified date are displayed on content pages.</strong> Freshness is a ranking signal for informational queries. Displaying dates also helps LLMs assess whether your content is current.</li>
+  <li><strong>External links point to authoritative sources.</strong> Citing reputable sources improves E-E-A-T and provides AI systems with context about the reliability of your claims.</li>
+  <li><strong>FAQ sections exist on informational pages where natural Q&A applies.</strong> AI Overviews frequently pull from clearly structured Q&A content. FAQ sections with concise, direct answers are a strong signal.</li>
+  <li><strong>Site speed on mobile passes Core Web Vitals thresholds in the field data.</strong> Field data from CrUX (Chrome User Experience Report) is what Google uses for ranking — not lab scores. Check your domain in the CrUX dashboard directly.</li>
+  <li><strong>HTTPS is enforced site-wide with no mixed content errors.</strong> HTTPS is a baseline ranking signal and a trust indicator. Mixed content (HTTP resources on HTTPS pages) is flagged by browsers and creates security warnings.</li>
+  <li><strong>Canonical tags, OG tags, and meta descriptions are present and accurate on all key pages.</strong> These are basic on-page hygiene items that affect how your pages appear in SERPs and when shared socially.</li>
+</ul>

@@ -36,24 +36,13 @@ layout: default
 
                 <!-- Prev / Next Navigation -->
                 {% if page.previous or page.next %}
-                <nav class="post-nav" aria-label="Post navigation">
+                <nav class="post-nav-simple" aria-label="Post navigation">
                     {% if page.next %}
-                    <a href="{{ page.next.url | relative_url }}" class="post-nav-item prev">
-                        <span class="post-nav-label">&larr; Previous</span>
-                        <span class="post-nav-title">{{ page.next.title }}</span>
-                    </a>
-                    {% else %}
-                    <div></div>
-                    {% endif %}
-
+                    <a href="{{ page.next.url | relative_url }}">&larr; {{ page.next.title | truncatewords: 6 }}</a>
+                    {% else %}<span></span>{% endif %}
                     {% if page.previous %}
-                    <a href="{{ page.previous.url | relative_url }}" class="post-nav-item next">
-                        <span class="post-nav-label">Next &rarr;</span>
-                        <span class="post-nav-title">{{ page.previous.title }}</span>
-                    </a>
-                    {% else %}
-                    <div></div>
-                    {% endif %}
+                    <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title | truncatewords: 6 }} &rarr;</a>
+                    {% else %}<span></span>{% endif %}
                 </nav>
                 {% endif %}
             </div>

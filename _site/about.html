@@ -51,11 +51,12 @@
 .about-cert-edu { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 4rem; }
 .timeline-entry { display: flex; gap: 1.5rem; margin-bottom: 2rem; position: relative; }
 .timeline-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; border: 3px solid white; }
-.timeline-body { background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 1.5rem; flex: 1; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+.timeline-body { background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 1.5rem; flex: 1; box-shadow: 0 2px 10px rgba(0,0,0,0.04); min-width: 0; overflow-wrap: break-word; word-break: break-word; }
 .timeline-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
 .timeline-badge { padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; height: fit-content; white-space: nowrap; }
 .timeline-list { list-style: none; padding: 0; margin: 0; }
-.timeline-li { display: flex; gap: 0.6rem; padding: 0.35rem 0; color: #334155; font-size: 0.9rem; border-bottom: 1px solid #F1F5F9; }
+.timeline-li { display: flex; gap: 0.6rem; padding: 0.35rem 0; color: #334155; font-size: 0.9rem; border-bottom: 1px solid #F1F5F9; min-width: 0; overflow-wrap: break-word; word-break: break-word; }
+.timeline-li > span:last-child { min-width: 0; flex: 1; overflow-wrap: break-word; word-break: break-word; }
 .timeline-li:last-child { border-bottom: none; }
 @media (max-width: 768px) {
     .about-cert-edu { grid-template-columns: 1fr; }
@@ -63,6 +64,9 @@
 }
 @media (max-width: 480px) {
     .about-stats { grid-template-columns: 1fr 1fr; }
+    .timeline-entry { flex-direction: column; gap: 0.75rem; }
+    .timeline-icon { width: 36px; height: 36px; font-size: 1rem; }
+    .timeline-body { padding: 1rem; }
 }
 </style>
 <section class="page-section">

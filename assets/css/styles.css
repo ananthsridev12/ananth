@@ -1234,7 +1234,32 @@ footer {
     font-weight: 700;
 }
 
-/* Post navigation */
+/* Post navigation — simple inline links */
+.post-nav-simple {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+.post-nav-simple a {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    max-width: 45%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.post-nav-simple a:hover {
+    text-decoration: underline;
+}
+
+/* Post navigation — legacy large cards (kept but unused) */
 .post-nav {
     display: grid;
     grid-template-columns: 1fr 1fr;

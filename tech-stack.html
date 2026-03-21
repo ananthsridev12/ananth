@@ -9,6 +9,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .tech-categories { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+        .stack-benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        @media (max-width: 900px) {
+            .stack-benefits-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .tech-categories { grid-template-columns: 1fr; gap: 1.5rem; }
+            .tech-category { padding: 1.5rem !important; }
+        }
+        @media (max-width: 600px) {
+            .stack-benefits-grid { grid-template-columns: 1fr; }
+            .tech-intro { padding: 1.25rem !important; }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -49,7 +64,7 @@
                 <p style="margin: 0; font-size: 1.1rem;">This isn't just a list of tools—it's my growth infrastructure. Each tool solves a specific problem in the marketing and analytics workflow. From tracking user behavior to optimizing campaign performance to automating lead nurturing, this stack helps me build systems that drive measurable, scalable growth.</p>
             </div>
 
-            <div class="tech-categories" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem;">
+            <div class="tech-categories">
                 
                 <div class="tech-category" style="background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08);">
                     <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; color: #0F172A;"><span style="font-size: 2.5rem; margin-right: 0.5rem;">📊</span> Analytics & Tracking</h3>
@@ -122,7 +137,7 @@
 
             <div class="stack-benefits" style="margin-top: 4rem;">
                 <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: #0F172A;">How This Stack Drives Growth</h2>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                <div class="stack-benefits-grid">
                     <div style="text-align: center; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08);">
                         <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
                         <h4 style="font-size: 1.2rem; margin-bottom: 1rem; color: #0F172A;">Accurate Tracking</h4>

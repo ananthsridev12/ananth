@@ -1,0 +1,29 @@
+# ──────────────────────────────────────────────
+# Site-wide configuration — edit this file to
+# update stats, contact info, and social links
+# across the entire website automatically.
+# ──────────────────────────────────────────────
+
+# Stats (shown in hero, stats bar, about page, footer)
+years_experience: "6+"
+projects_delivered: "150+"
+avg_traffic_growth: "3x"
+avg_cpl_reduction: "40%"
+cpl_reduction_percent: "25%"
+conversion_improvement: "25%"
+
+# Contact details
+email: "m.ananthsridev@gmail.com"
+phone: "+91 9790777702"
+location: "Chennai, India"
+
+# Social media links (leave blank to hide)
+linkedin: "https://www.linkedin.com/in/ananthsridev/"
+twitter: "https://twitter.com/ananthsridev"
+facebook: "https://www.facebook.com/ananthsridev"
+instagram: "https://www.instagram.com/ananthsridev"
+
+# Newsletter / form
+newsletter_subject: "New Newsletter Subscription"
+newsletter_redirect: "https://ananth.easi7.in/thank-you.html"
+contact_form_email: "m.ananthsridev@gmail.com"

@@ -36,10 +36,10 @@ permalink: /blog.html
             <div class="newsletter-content">
                 <h2>Get Marketing Insights Delivered</h2>
                 <p>Join 1,000+ marketers getting weekly tips on SEO, analytics, and growth strategies.</p>
-                <form class="newsletter-form" action="https://formsubmit.co/m.ananthsridev@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New Newsletter Subscription">
+                <form class="newsletter-form" action="https://formsubmit.co/{{ site.data.site.email }}" method="POST">
+                    <input type="hidden" name="_subject" value="{{ site.data.site.newsletter_subject }}">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://ananth.easi7.in/thank-you.html">
+                    <input type="hidden" name="_next" value="{{ site.data.site.newsletter_redirect }}">
                     <input type="email" name="email" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
                 </form>

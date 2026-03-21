@@ -4,6 +4,13 @@ title: "Services | Ananth Sridev - Digital Marketing Services"
 description: "SEO, performance marketing, analytics, and marketing automation services. Expert digital marketing solutions for business growth."
 permalink: /services.html
 ---
+<style>
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 4rem; }
+.svc-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+@media (max-width: 1024px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .svc-grid { grid-template-columns: 1fr; } .svc-steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .svc-steps { grid-template-columns: 1fr; } }
+</style>
 <section class="page-section">
     <div class="container">
 
@@ -16,7 +23,7 @@ permalink: /services.html
         </div>
 
         <!-- Services Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+        <div class="svc-grid">
 
             <!-- Performance Marketing -->
             <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.07); border-top: 4px solid #2563EB;">
@@ -120,16 +127,27 @@ permalink: /services.html
         <div style="background: #0F172A; border-radius: 16px; padding: 3rem; margin-bottom: 4rem;">
             <h2 style="font-family: 'Playfair Display', serif; color: white; font-size: 1.8rem; text-align: center; margin-bottom: 0.5rem;">How an Engagement Works</h2>
             <p style="color: #94A3B8; text-align: center; margin-bottom: 2.5rem;">A simple, transparent process from first call to ongoing results.</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem;">
-                {% assign steps = "1|Discovery Call|We discuss your goals, current setup, and where the biggest gaps are.|#2563EB,2|Audit &amp; Proposal|I audit your existing marketing and present a prioritised action plan.|#0891B2,3|Implementation|I execute the agreed scope&mdash;campaigns, tracking, content, or automation.|#059669,4|Report &amp; Optimise|Regular reporting on what&rsquo;s working and continuous improvement cycles.|#F59E0B" | split: "," %}
-                {% for step in steps %}
-                    {% assign sp = step | split: "|" %}
-                    <div style="text-align: center;">
-                        <div style="width: 48px; height: 48px; background: {{ sp[3] }}; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: 700; font-size: 1.1rem;">{{ sp[0] }}</div>
-                        <h4 style="color: white; margin-bottom: 0.5rem;">{{ sp[1] }}</h4>
-                        <p style="color: #94A3B8; font-size: 0.875rem; line-height: 1.6;">{{ sp[2] }}</p>
-                    </div>
-                {% endfor %}
+            <div class="svc-steps">
+                <div style="text-align: center; padding: 0.5rem;">
+                    <div style="width: 52px; height: 52px; background: #2563EB; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: 700; font-size: 1.2rem;">1</div>
+                    <h4 style="color: white; margin-bottom: 0.75rem; font-size: 1rem;">Discovery Call</h4>
+                    <p style="color: #94A3B8; font-size: 0.875rem; line-height: 1.6; margin: 0;">We discuss your goals, current setup, and where the biggest gaps and opportunities are.</p>
+                </div>
+                <div style="text-align: center; padding: 0.5rem;">
+                    <div style="width: 52px; height: 52px; background: #0891B2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: 700; font-size: 1.2rem;">2</div>
+                    <h4 style="color: white; margin-bottom: 0.75rem; font-size: 1rem;">Audit &amp; Proposal</h4>
+                    <p style="color: #94A3B8; font-size: 0.875rem; line-height: 1.6; margin: 0;">I audit your existing marketing stack and present a prioritised, scoped action plan.</p>
+                </div>
+                <div style="text-align: center; padding: 0.5rem;">
+                    <div style="width: 52px; height: 52px; background: #059669; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: 700; font-size: 1.2rem;">3</div>
+                    <h4 style="color: white; margin-bottom: 0.75rem; font-size: 1rem;">Implementation</h4>
+                    <p style="color: #94A3B8; font-size: 0.875rem; line-height: 1.6; margin: 0;">I execute the agreed scope&mdash;campaigns, tracking infrastructure, content, or automation.</p>
+                </div>
+                <div style="text-align: center; padding: 0.5rem;">
+                    <div style="width: 52px; height: 52px; background: #F59E0B; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: 700; font-size: 1.2rem;">4</div>
+                    <h4 style="color: white; margin-bottom: 0.75rem; font-size: 1rem;">Report &amp; Optimise</h4>
+                    <p style="color: #94A3B8; font-size: 0.875rem; line-height: 1.6; margin: 0;">Regular reporting on what&rsquo;s working, with continuous improvement cycles each month.</p>
+                </div>
             </div>
         </div>
 

@@ -33,6 +33,29 @@ layout: default
                 <div class="post-content">
                     {{ content }}
                 </div>
+
+                <!-- Prev / Next Navigation -->
+                {% if page.previous or page.next %}
+                <nav class="post-nav" aria-label="Post navigation">
+                    {% if page.next %}
+                    <a href="{{ page.next.url | relative_url }}" class="post-nav-item prev">
+                        <span class="post-nav-label">&larr; Previous</span>
+                        <span class="post-nav-title">{{ page.next.title }}</span>
+                    </a>
+                    {% else %}
+                    <div></div>
+                    {% endif %}
+
+                    {% if page.previous %}
+                    <a href="{{ page.previous.url | relative_url }}" class="post-nav-item next">
+                        <span class="post-nav-label">Next &rarr;</span>
+                        <span class="post-nav-title">{{ page.previous.title }}</span>
+                    </a>
+                    {% else %}
+                    <div></div>
+                    {% endif %}
+                </nav>
+                {% endif %}
             </div>
 
             <aside class="post-sidebar">
@@ -54,13 +77,15 @@ layout: default
                         {% endif %}
                     </ul>
                 </div>
-                <div class="sidebar-card">
-                    <h3>AI-ready checklist</h3>
+                <div class="sidebar-card" style="background: #EFF6FF; border-color: #BFDBFE;">
+                    <h3 style="color: #1E40AF;">All Articles</h3>
                     <ul class="sidebar-list">
-                        <li>Clear headings</li>
-                        <li>Structured data</li>
-                        <li>Clean tracking</li>
-                        <li>Consistent naming</li>
+                        {% for post in site.posts limit:6 %}
+                        {% if post.url != page.url %}
+                        <li><a href="{{ post.url | relative_url }}">{{ post.title | truncatewords: 6 }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                        <li style="margin-top: 0.5rem;"><a href="{{ '/blog.html' | relative_url }}" style="color: #0F172A; font-weight: 700;">View all posts &rarr;</a></li>
                     </ul>
                 </div>
             </aside>

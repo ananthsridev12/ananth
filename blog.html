@@ -13,27 +13,8 @@ permalink: /blog.html
             <p class="section-subtitle">Practical SEO, PPC, analytics, and AI-era growth systems based on real implementations.</p>
         </div>
 
-        {% assign featured = site.posts | first %}
-        {% if featured %}
-        <div class="featured-post">
-            <div class="featured-image">
-                <span class="featured-badge">Featured</span>
-            </div>
-            <div class="featured-content">
-                <div class="post-meta">
-                    <span class="category {{ featured.category_class }}">{{ featured.category }}</span>
-                    <span class="date">{{ featured.date | date: "%B %-d, %Y" }}</span>
-                    <span class="read-time">{{ featured.read_time }}</span>
-                </div>
-                <h2><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
-                <p>{{ featured.description }}</p>
-                <a href="{{ featured.url | relative_url }}" class="read-more-btn">Read Article &rarr;</a>
-            </div>
-        </div>
-        {% endif %}
-
         <div class="blog-grid">
-            {% for post in site.posts offset:1 limit:9 %}
+            {% for post in site.posts limit:12 %}
             <article class="blog-card">
                 <div class="blog-image">
                     <span class="blog-category {{ post.category_class }}">{{ post.category }}</span>

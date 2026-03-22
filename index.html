@@ -22,20 +22,30 @@ permalink: /index.html
 }
 #intro-skip:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
 #intro-chat-wrap {
-  width: 100%; max-width: 460px; padding: 0 24px;
+  width: 100%; max-width: 480px; padding: 0 24px;
   display: flex; flex-direction: column;
 }
 #intro-chat-scroll {
-  max-height: 320px; overflow: hidden;
+  max-height: 380px; overflow: hidden;
   display: flex; flex-direction: column; justify-content: flex-end;
 }
 #intro-chat-messages { display: flex; flex-direction: column; gap: 10px; }
+
+/* Ananth message row */
 .intro-chat-row {
   display: flex; align-items: flex-end; gap: 10px;
   opacity: 0; transform: translateY(8px);
   animation: introIn 0.38s ease forwards;
 }
+/* Visitor reply row */
+.intro-visitor-row {
+  display: flex; align-items: flex-end; gap: 10px;
+  justify-content: flex-end;
+  opacity: 0; transform: translateY(8px);
+  animation: introIn 0.38s ease forwards;
+}
 @keyframes introIn { to { opacity: 1; transform: translateY(0); } }
+
 .intro-avatar {
   width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
   background: #2563EB; color: #fff;
@@ -45,8 +55,15 @@ permalink: /index.html
 .intro-bubble {
   background: #1E293B; color: #E2E8F0;
   padding: 12px 16px; border-radius: 18px 18px 18px 4px;
-  font-size: 1rem; line-height: 1.5; max-width: 340px;
+  font-size: 1rem; line-height: 1.5; max-width: 320px;
 }
+.intro-visitor-bubble {
+  background: #2563EB; color: #fff;
+  padding: 12px 16px; border-radius: 18px 18px 4px 18px;
+  font-size: 0.95rem; line-height: 1.5; max-width: 280px;
+}
+
+/* Typing indicator */
 #intro-typing-row {
   display: none; align-items: flex-end; gap: 10px; margin-top: 10px;
 }
@@ -65,17 +82,28 @@ permalink: /index.html
   0%, 60%, 100% { transform: translateY(0); opacity: 0.45; }
   30% { transform: translateY(-5px); opacity: 1; }
 }
-#intro-cta {
-  display: none; margin-top: 28px; text-align: center;
-  animation: introIn 0.4s ease forwards;
+
+/* Predefined reply options */
+#intro-options {
+  display: none; margin-top: 20px;
+  flex-direction: column; gap: 10px;
+  opacity: 0; animation: introIn 0.4s ease forwards;
 }
-#intro-enter-btn {
-  display: inline-block; background: #2563EB; color: #fff;
-  padding: 14px 36px; border-radius: 8px;
-  font-size: 0.95rem; font-weight: 700; text-decoration: none;
-  letter-spacing: 0.02em; transition: background 0.2s, transform 0.15s;
+.intro-option-btn {
+  background: transparent;
+  border: 1px solid rgba(37,99,235,0.45);
+  color: #93C5FD;
+  padding: 12px 20px; border-radius: 10px;
+  font-size: 0.9rem; font-weight: 600; cursor: pointer;
+  text-align: left;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  letter-spacing: 0.01em;
 }
-#intro-enter-btn:hover { background: #1D4ED8; transform: translateY(-1px); }
+.intro-option-btn:hover {
+  background: rgba(37,99,235,0.18);
+  border-color: #2563EB;
+  color: #fff;
+}
 </style>
 
 <!-- Chat Intro Overlay -->
@@ -89,8 +117,10 @@ permalink: /index.html
         <div id="intro-typing-dots"><span></span><span></span><span></span></div>
       </div>
     </div>
-    <div id="intro-cta">
-      <a href="#" id="intro-enter-btn">Enter Site &rarr;</a>
+    <div id="intro-options">
+      <button class="intro-option-btn" data-reply="Looking to hire a marketer" data-url="/contact.html">&#128202; Looking to hire a marketer</button>
+      <button class="intro-option-btn" data-reply="Exploring your work" data-url="/portfolio.html">&#128188; Exploring your work</button>
+      <button class="intro-option-btn" data-reply="Just browsing" data-url="">&#128065; Just browsing</button>
     </div>
   </div>
 </div>
@@ -103,25 +133,42 @@ permalink: /index.html
     overlay.style.display = 'none';
     return;
   }
+
   var messages = [
     "Hey there! &#128075;",
     "I&rsquo;m Ananth Sridev",
-    "Digital Marketing Specialist &mdash; 6+ years experience",
-    "I help brands grow with data-driven strategies &#128200;",
-    "Here&rsquo;s a look at what I do &darr;"
+    "Digital marketing specialist &mdash; 6+ years of experience",
+    "What brings you here today?"
   ];
-  var chatMessages = document.getElementById('intro-chat-messages');
-  var typingRow   = document.getElementById('intro-typing-row');
-  var introCta    = document.getElementById('intro-cta');
-  function dismiss() {
+
+  var chatMessages  = document.getElementById('intro-chat-messages');
+  var typingRow     = document.getElementById('intro-typing-row');
+  var introOptions  = document.getElementById('intro-options');
+
+  function dismiss(url) {
     sessionStorage.setItem('intro_seen', '1');
     overlay.classList.add('intro-fade-out');
-    setTimeout(function () { overlay.style.display = 'none'; }, 700);
+    setTimeout(function () {
+      overlay.style.display = 'none';
+      if (url) { window.location.href = url; }
+    }, 700);
   }
-  document.getElementById('intro-skip').addEventListener('click', dismiss);
-  document.getElementById('intro-enter-btn').addEventListener('click', function (e) {
-    e.preventDefault(); dismiss();
-  });
+
+  function addMessage(msg, isVisitor) {
+    var row = document.createElement('div');
+    if (isVisitor) {
+      row.className = 'intro-visitor-row';
+      row.innerHTML = '<div class="intro-visitor-bubble">' + msg + '</div>';
+    } else {
+      row.className = 'intro-chat-row';
+      row.innerHTML = '<div class="intro-avatar">A</div><div class="intro-bubble">' + msg + '</div>';
+    }
+    chatMessages.appendChild(row);
+  }
+
+  document.getElementById('intro-skip').addEventListener('click', function () { dismiss(''); });
+
+  /* Play Ananth's opening messages */
   var delay = 400;
   messages.forEach(function (msg, i) {
     var isLast = i === messages.length - 1;
@@ -129,17 +176,47 @@ permalink: /index.html
     delay += 950;
     setTimeout(function () {
       typingRow.style.display = 'none';
-      var row = document.createElement('div');
-      row.className = 'intro-chat-row';
-      row.innerHTML = '<div class="intro-avatar">A</div><div class="intro-bubble">' + msg + '</div>';
-      chatMessages.appendChild(row);
+      addMessage(msg, false);
     }, delay);
     delay += isLast ? 200 : 500;
   });
+
+  /* Show reply options after last message */
   setTimeout(function () {
     typingRow.style.display = 'none';
-    introCta.style.display = 'block';
-  }, delay + 100);
+    introOptions.style.display = 'flex';
+  }, delay + 150);
+
+  /* Handle visitor choice */
+  document.querySelectorAll('.intro-option-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var reply = btn.getAttribute('data-reply');
+      var url   = btn.getAttribute('data-url');
+
+      /* Lock all buttons */
+      document.querySelectorAll('.intro-option-btn').forEach(function (b) { b.disabled = true; });
+      introOptions.style.display = 'none';
+
+      /* Show visitor's chosen reply */
+      addMessage(reply, true);
+
+      /* Ananth types back */
+      setTimeout(function () { typingRow.style.display = 'flex'; }, 350);
+
+      var responses = {
+        '/contact.html':  'Great! Let&rsquo;s connect &mdash; taking you there now &#128200;',
+        '/portfolio.html':'Awesome! Here&rsquo;s a look at my work &#128188;',
+        '':               'No worries &mdash; take your time! &#128075; Enjoy the site.'
+      };
+      var responseText = responses[url] !== undefined ? responses[url] : 'Sure! Let me show you around &#128075;';
+
+      setTimeout(function () {
+        typingRow.style.display = 'none';
+        addMessage(responseText, false);
+        setTimeout(function () { dismiss(url); }, 1300);
+      }, 1500);
+    });
+  });
 })();
 </script>
 

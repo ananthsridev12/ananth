@@ -24,6 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/styles.css">
+<script>window.dataLayer = window.dataLayer || [];</script>
 
 
 <!-- Google Tag Manager -->
@@ -234,7 +235,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     chatMessages.appendChild(row);
   }
 
-  document.getElementById('intro-skip').addEventListener('click', function () { dismiss(''); });
+  document.getElementById('intro-skip').addEventListener('click', function () {
+    if (window.gtmPush) { window.gtmPush({ event: 'chat_intro', event_category: 'Chat Intro', event_label: 'Skipped' }); }
+    dismiss('');
+  });
 
   /* Play Ananth's opening messages */
   var delay = 400;
@@ -260,6 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     btn.addEventListener('click', function () {
       var reply = btn.getAttribute('data-reply');
       var url   = btn.getAttribute('data-url');
+      if (window.gtmPush) { window.gtmPush({ event: 'chat_intro', event_category: 'Chat Intro', event_label: reply, event_destination: url }); }
 
       /* Lock all buttons */
       document.querySelectorAll('.intro-option-btn').forEach(function (b) { b.disabled = true; });
@@ -836,6 +841,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="/assets/js/config.js"></script>
 <script src="/assets/js/main.js"></script>
 
+    <script src="/assets/js/events.js"></script>
 </body>
 </html>
 

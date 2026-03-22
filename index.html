@@ -166,7 +166,10 @@ permalink: /index.html
     chatMessages.appendChild(row);
   }
 
-  document.getElementById('intro-skip').addEventListener('click', function () { dismiss(''); });
+  document.getElementById('intro-skip').addEventListener('click', function () {
+    if (window.gtmPush) { window.gtmPush({ event: 'chat_intro', event_category: 'Chat Intro', event_label: 'Skipped' }); }
+    dismiss('');
+  });
 
   /* Play Ananth's opening messages */
   var delay = 400;
@@ -192,6 +195,7 @@ permalink: /index.html
     btn.addEventListener('click', function () {
       var reply = btn.getAttribute('data-reply');
       var url   = btn.getAttribute('data-url');
+      if (window.gtmPush) { window.gtmPush({ event: 'chat_intro', event_category: 'Chat Intro', event_label: reply, event_destination: url }); }
 
       /* Lock all buttons */
       document.querySelectorAll('.intro-option-btn').forEach(function (b) { b.disabled = true; });

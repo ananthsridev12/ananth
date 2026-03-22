@@ -1,8 +1,54 @@
-url: "https://ananth.easi7.in"
-baseurl: ""
-title: "Ananth Sridev"
-description: "Data-driven Digital Marketing Specialist"
-permalink: /blog/:slug.html
-markdown: kramdown
+url:         "https://ananth.easi7.in"
+baseurl:     ""
+title:       "Ananth Sridev"
+description: "Data-driven Digital Marketing Specialist with 6+ years of expertise in SEO, performance marketing, GA4, GTM, and marketing automation."
+permalink:   /blog/:slug.html
+markdown:    kramdown
 collections: {}
 
+# ── Author ────────────────────────────────────────────────────────────────────
+author:
+  name:    "Ananth Sridev"
+  email:   "m.ananthsridev@gmail.com"
+  twitter: "ananthsridev"
+
+# ── Twitter / SEO Tag ─────────────────────────────────────────────────────────
+twitter:
+  username: "ananthsridev"
+  card:     "summary"
+
+# ── Social / JSON-LD ──────────────────────────────────────────────────────────
+social:
+  name: "Ananth Sridev"
+  links:
+    - "https://www.linkedin.com/in/ananthsridev/"
+    - "https://twitter.com/ananthsridev"
+    - "https://www.facebook.com/ananthsridev"
+    - "https://www.instagram.com/ananthsridev"
+
+# ── Logo (used by SEO tag for structured data) ───────────────────────────────
+logo: "/favicon.svg"
+
+# ── Feed (jekyll-feed) ────────────────────────────────────────────────────────
+feed:
+  title:    "Ananth Sridev | Digital Marketing Blog"
+  subtitle: "Insights on SEO, performance marketing, analytics, and AI-driven growth."
+  path:     "feed.xml"
+
+# ── Plugins ───────────────────────────────────────────────────────────────────
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-redirect-from
+
+# ── Sitemap exclusions ────────────────────────────────────────────────────────
+defaults:
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
+  - scope:
+      path: "*.txt"
+    values:
+      sitemap: false

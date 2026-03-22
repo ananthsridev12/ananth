@@ -5,7 +5,11 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(git -C \"D:\\\\Projects\\\\ananth.easi7.in\" log --oneline -5)"
+      "Bash(git -C \"D:\\\\Projects\\\\ananth.easi7.in\" log --oneline -5)",
+      "Bash(gem list:*)",
+      "Bash(findstr -i \"jekyll\")",
+      "Bash(ruby --version)",
+      "Bash(jekyll --version)"
     ]
   }
 }

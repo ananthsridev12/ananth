@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ananth.easi7.in/sitemap.xml

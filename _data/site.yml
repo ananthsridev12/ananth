@@ -30,7 +30,7 @@ contact_form_email: "m.ananthsridev@gmail.com"
 
 # ── Analytics (leave blank to disable) ────────────────────────────────────────
 # Google Tag Manager        →  format: GTM-XXXXXXX
-gtm_container_id: ""
+gtm_container_id: "GTM-NXP2SZK9"
 # Google Analytics 4        →  format: G-XXXXXXXXXX
 ga4_measurement_id: ""
 # Google Search Console     →  the content value from the verification meta tag

@@ -29,7 +29,10 @@ newsletter_redirect: "https://ananth.easi7.in/thank-you.html"
 contact_form_email: "m.ananthsridev@gmail.com"
 
 # ── Analytics (leave blank to disable) ────────────────────────────────────────
-# Google Tag Manager  →  format: GTM-XXXXXXX
+# Google Tag Manager        →  format: GTM-XXXXXXX
 gtm_container_id: ""
-# Google Analytics 4  →  format: G-XXXXXXXXXX
+# Google Analytics 4        →  format: G-XXXXXXXXXX
 ga4_measurement_id: ""
+# Google Search Console     →  the content value from the verification meta tag
+#   e.g. <meta name="google-site-verification" content="PASTE_THIS_PART_ONLY">
+google_site_verification: ""

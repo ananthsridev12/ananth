@@ -4,7 +4,8 @@
       "Bash(jekyll build:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git -C \"D:\\\\Projects\\\\ananth.easi7.in\" log --oneline -5)"
     ]
   }
 }

@@ -1,6 +1,14 @@
 (function () {
   "use strict";
 
+  // Scroll-aware nav: add .scrolled class after 20px
+  var siteNav = document.getElementById('site-nav');
+  if (siteNav) {
+    window.addEventListener('scroll', function () {
+      siteNav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  }
+
   function toggleMenu() {
     var menu = document.getElementById("navMenu");
     var toggle = document.querySelector(".menu-toggle");

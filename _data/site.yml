@@ -27,3 +27,9 @@ instagram: "https://www.instagram.com/ananthsridev"
 newsletter_subject: "New Newsletter Subscription"
 newsletter_redirect: "https://ananth.easi7.in/thank-you.html"
 contact_form_email: "m.ananthsridev@gmail.com"
+
+# ── Analytics (leave blank to disable) ────────────────────────────────────────
+# Google Tag Manager  →  format: GTM-XXXXXXX
+gtm_container_id: ""
+# Google Analytics 4  →  format: G-XXXXXXXXXX
+ga4_measurement_id: ""

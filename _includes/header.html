@@ -1,22 +1,25 @@
-<nav>
-    <div class="container">
-        <a href="{{ '/index.html' | relative_url }}" class="logo">Ananth<span>Sridev</span></a>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul id="navMenu">
-            <li><a href="{{ '/index.html' | relative_url }}" class="nav-link">Home</a></li>
-            <li><a href="{{ '/about.html' | relative_url }}" class="nav-link">About</a></li>
-            <li><a href="{{ '/services.html' | relative_url }}" class="nav-link">Services</a></li>
-            <li><a href="{{ '/portfolio.html' | relative_url }}" class="nav-link">Portfolio</a></li>
-            <li><a href="{{ '/case-studies.html' | relative_url }}" class="nav-link">Case Studies</a></li>
-            <li><a href="{{ '/blog.html' | relative_url }}" class="nav-link">Blog</a></li>
-            <li><a href="{{ '/tech-stack.html' | relative_url }}" class="nav-link">Tech Stack</a></li>
-            <li><a href="{{ '/resume.html' | relative_url }}" class="nav-link">Resume</a></li>
-            <li><a href="{{ '/contact.html' | relative_url }}" class="nav-link nav-cta">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+<nav id="site-nav">
+  <div class="container">
 
+    <a href="{{ '/index.html' | relative_url }}" class="logo">
+      Ananth<span>Sridev</span>
+    </a>
+
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul id="navMenu">
+      <li><a href="{{ '/index.html' | relative_url }}"       class="nav-link{% if page.url == '/index.html' %} active{% endif %}">Home</a></li>
+      <li><a href="{{ '/about.html' | relative_url }}"       class="nav-link{% if page.url == '/about.html' %} active{% endif %}">About</a></li>
+      <li><a href="{{ '/services.html' | relative_url }}"    class="nav-link{% if page.url == '/services.html' %} active{% endif %}">Services</a></li>
+      <li><a href="{{ '/portfolio.html' | relative_url }}"   class="nav-link{% if page.url == '/portfolio.html' %} active{% endif %}">Portfolio</a></li>
+      <li><a href="{{ '/case-studies.html' | relative_url }}" class="nav-link{% if page.url == '/case-studies.html' %} active{% endif %}">Case Studies</a></li>
+      <li><a href="{{ '/blog.html' | relative_url }}"        class="nav-link{% if page.url == '/blog.html' %} active{% endif %}">Blog</a></li>
+      <li><a href="{{ '/tech-stack.html' | relative_url }}"  class="nav-link{% if page.url == '/tech-stack.html' %} active{% endif %}">Tech Stack</a></li>
+      <li><a href="{{ '/resume.html' | relative_url }}"      class="nav-link{% if page.url == '/resume.html' %} active{% endif %}">Resume</a></li>
+      <li><a href="{{ '/contact.html' | relative_url }}"     class="nav-link nav-cta{% if page.url == '/contact.html' %} active{% endif %}">Let&rsquo;s Talk</a></li>
+    </ul>
+
+  </div>
+</nav>

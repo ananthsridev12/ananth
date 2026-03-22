@@ -17,3 +17,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 
+{% if site.data.site.gtm_container_id and site.data.site.gtm_container_id != "" %}
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ site.data.site.gtm_container_id }}');</script>
+<!-- End Google Tag Manager -->
+{% endif %}
+
+{% if site.data.site.ga4_measurement_id and site.data.site.ga4_measurement_id != "" %}
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.site.ga4_measurement_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.data.site.ga4_measurement_id }}');
+</script>
+<!-- End Google Analytics 4 -->
+{% endif %}
+

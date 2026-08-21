@@ -1,7 +1,7 @@
 url:         "https://ananth.easi7.in"
 baseurl:     ""
 title:       "Ananth Sridev"
-description: "Data-driven Digital Marketing Specialist with 6+ years of expertise in SEO, performance marketing, GA4, GTM, and marketing automation."
+description: "Digital Marketing & Marketing Technology Specialist with 10+ years of experience in performance marketing, GA4, GTM, CRM automation, and AI-assisted MarTech workflows."
 permalink:   /blog/:slug.html
 markdown:    kramdown
 collections: {}

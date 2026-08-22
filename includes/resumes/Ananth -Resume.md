@@ -62,7 +62,7 @@ Digital Marketing and Marketing Technology professional with 12+ years of overal
 - Developed digital marketing strategies, advertising budgets, and campaign plans across SEO, PPC, landing pages, and social media.
 - Managed Google Shopping and Facebook commerce campaigns.
 - Scaled performance marketing budgets from ₹0.5 lakh/month to ₹3 lakh/month across U.S., Canada, and Indian markets.
-- Implemented Universal Analytics on WordPress websites with pageview, event, goal, and conversion tracking.
+- Implemented Universal Analytics on Magento websites with pageview, event, goal, and conversion tracking.
 
 ### Trainee
 **Polyhose India Rubber Private Limited** — Chennai | November 2013 - August 2015

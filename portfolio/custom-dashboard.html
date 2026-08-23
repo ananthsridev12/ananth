@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Custom Dashboard & Reporting System - Portfolio"
-description: "Built an automated marketing dashboard using Looker Studio, BigQuery, and custom API integrations."
+description: "Built SQL-powered executive dashboards for DhanLAP, unifying Google Ads, Meta, LinkedIn, GA4, and CRM data."
 permalink: /portfolio/custom-dashboard.html
 ---
 <section class="page-section">
@@ -11,7 +11,7 @@ permalink: /portfolio/custom-dashboard.html
         <div class="section-header">
             <div class="section-tag">Analytics &amp; Reporting</div>
             <h1 class="section-title">Custom Dashboard &amp; Reporting System</h1>
-            <p class="section-subtitle">Replaced 4 manual weekly reports with a single automated, always-current dashboard.</p>
+            <p class="section-subtitle">SQL-powered marketing dashboards for DhanLAP's campaign reporting.</p>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 3rem 0;">
@@ -20,42 +20,39 @@ permalink: /portfolio/custom-dashboard.html
                 <div style="opacity: 0.9;">Reporting Time</div>
             </div>
             <div style="background: #0F172A; color: white; padding: 2rem; border-radius: 12px; text-align: center;">
-                <div style="font-size: 2.5rem; font-weight: 700;">5</div>
+                <div style="font-size: 2.5rem; font-weight: 700;">2 &rarr; 5</div>
                 <div style="opacity: 0.9;">Channels Unified</div>
             </div>
             <div style="background: #F59E0B; color: white; padding: 2rem; border-radius: 12px; text-align: center;">
-                <div style="font-size: 2.5rem; font-weight: 700;">35+</div>
+                <div style="font-size: 2.5rem; font-weight: 700;">12 &rarr; 35+</div>
                 <div style="opacity: 0.9;">Campaigns Tracked</div>
             </div>
         </div>
 
         <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 2rem 0;">
-            {% assign tool_tags = "Looker Studio,BigQuery,SQL,GA4,Google Ads API,Automation" | split: "," %}{% for tag in tool_tags %}
+            {% assign tool_tags = "Looker Studio,BigQuery,SQL,GA4,Google Ads,Meta Ads,LinkedIn Ads,CRM" | split: "," %}{% for tag in tool_tags %}
             <span style="background: #EFF6FF; color: #2563EB; padding: 0.5rem 1.2rem; border-radius: 20px; font-size: 1rem; font-weight: 600;">{{ tag }}</span>
             {% endfor %}
         </div>
 
         <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 2rem;">
             <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">The Challenge</h2>
-            <p style="color: #334155; line-height: 1.8;">The marketing team was spending 4+ hours every week manually pulling data from GA4, Google Ads, Meta Ads, LinkedIn Ads, and their CRM to build Excel reports. Data was always 1&ndash;3 days stale by the time it reached decision-makers, and there was no single source of truth.</p>
+            <p style="color: #334155; line-height: 1.8;">DhanLAP's marketing reporting was manual and spread across just 2 channels, with the team spending around 4 hours a week pulling data by hand instead of running campaigns.</p>
         </div>
 
         <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 2rem;">
             <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1.5rem;">What I Did</h2>
             <ul style="color: #334155; line-height: 2; padding-left: 1.5rem;">
-                <li>Connected GA4 BigQuery export to centralise all website behaviour data</li>
-                <li>Pulled Google Ads, Meta Ads, and LinkedIn Ads data into BigQuery via scheduled data transfers</li>
-                <li>Wrote SQL queries to unify 35+ campaigns across all channels into clean, aggregated reporting tables (CPL, ROAS, revenue by channel)</li>
-                <li>Built a Looker Studio dashboard with 5 pages: Executive Summary, Paid Media, Organic, Email, and Pipeline</li>
-                <li>Set up scheduled email delivery of the dashboard every Monday morning</li>
-                <li>Added alert thresholds - if CPL exceeds target by 20%, the dashboard highlights it in red</li>
-                <li>Documented the full data model so the internal team could maintain and extend it</li>
+                <li>Unified Google Ads, Meta, LinkedIn, GA4, and CRM data into a single reporting layer</li>
+                <li>Wrote SQL queries to aggregate campaign data across all 5 channels</li>
+                <li>Built executive dashboards in Looker Studio for campaign reporting</li>
+                <li>Scaled tracked campaign coverage from 12 to 35+ campaigns as channels were unified</li>
             </ul>
         </div>
 
         <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 3rem;">
             <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">Outcome</h2>
-            <p style="color: #334155; line-height: 1.8;">Weekly reporting time dropped from 4 hours to 30 minutes (just for review, no manual data pulling). The executive team now has real-time visibility into campaign performance. Data-driven budget decisions are made weekly instead of monthly.</p>
+            <p style="color: #334155; line-height: 1.8;">Weekly reporting time dropped from 4 hours to 30 minutes. Channel coverage in reporting grew from 2 to 5, and tracked campaigns grew from 12 to 35+, giving the team a single source of truth instead of manual data pulls.</p>
         </div>
 
         <div style="text-align: center;">

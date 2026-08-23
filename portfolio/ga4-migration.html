@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "GA4 Migration & Implementation - Portfolio"
-description: "Enterprise migration from Universal Analytics to GA4 with BigQuery integration and custom event tracking."
+description: "Migrated DhanLAP from Universal Analytics to GA4 around the July 2023 UA sunset, with loan-funnel event tracking and attribution across 5 channels."
 permalink: /portfolio/ga4-migration.html
 ---
 <section class="page-section">
@@ -11,7 +11,7 @@ permalink: /portfolio/ga4-migration.html
         <div class="section-header">
             <div class="section-tag">Analytics</div>
             <h1 class="section-title">GA4 Migration &amp; Implementation</h1>
-            <p class="section-subtitle">Full enterprise migration from Universal Analytics to GA4 with BigQuery export and custom dashboards.</p>
+            <p class="section-subtitle">Migrating DhanLAP from Universal Analytics to GA4 around the July 2023 UA sunset.</p>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 3rem 0;">
@@ -33,26 +33,24 @@ permalink: /portfolio/ga4-migration.html
 
         <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 2rem;">
             <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">The Challenge</h2>
-            <p style="color: #334155; line-height: 1.8;">With Universal Analytics sunset in July 2023, the client needed a complete migration to GA4 without losing historical data continuity. They also needed event tracking rebuilt from scratch since GA4's event model differs fundamentally from UA's.</p>
+            <p style="color: #334155; line-height: 1.8;">With Universal Analytics sunsetting in July 2023, DhanLAP needed a full migration to GA4. Event tracking had to be rebuilt around the loan funnel from the ground up, since GA4's event model differs fundamentally from UA's.</p>
         </div>
 
         <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 2rem;">
             <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1.5rem;">What I Did</h2>
             <ul style="color: #334155; line-height: 2; padding-left: 1.5rem;">
                 <li>Audited all existing UA goals and mapped them to GA4 event equivalents</li>
-                <li>Redesigned the GTM data layer to push structured event data for all user interactions</li>
-                <li>Configured 22 GA4 custom events, including form_submit, file_download, scroll_depth, video_play, and cta_click</li>
+                <li>Redesigned the GTM data layer to push structured event data across the loan application journey</li>
+                <li>Configured 22 GA4 custom events around the loan funnel, including loan eligibility checks, loan application submitted, and loan taken</li>
                 <li>Standardised UTM governance and integrated attribution across Google Ads, Meta, LinkedIn, Email, and Organic Search - 5 channels in total</li>
                 <li>Set up BigQuery export for long-term data retention and SQL-based analysis</li>
                 <li>Built Looker Studio dashboards pulling from BigQuery for real-time reporting, including assisted conversion reporting</li>
-                <li>Ran both UA and GA4 in parallel for 3 months to validate data accuracy</li>
-                <li>Trained the marketing team on GA4's exploration reports and funnel analysis</li>
             </ul>
         </div>
 
         <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); margin-bottom: 3rem;">
             <h2 style="font-family: 'Playfair Display', serif; color: #0F172A; margin-bottom: 1rem;">Outcome</h2>
-            <p style="color: #334155; line-height: 1.8;">Seamless migration with zero data gaps. The client now has a complete 2-year data warehouse in BigQuery. Custom dashboards give the marketing team daily visibility into acquisition, engagement, and conversion metrics without needing to export data manually.</p>
+            <p style="color: #334155; line-height: 1.8;">DhanLAP moved onto GA4 with a loan-funnel event model built for accurate conversion tracking, unified attribution across 5 channels, and BigQuery-backed reporting that replaced manual data pulls.</p>
         </div>
 
         <div style="text-align: center;">
